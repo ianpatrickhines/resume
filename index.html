@@ -550,9 +550,17 @@
                     <div class="experience-content">
                         <div class="experience-title">
                             {% if job.company_url %}
-                            <a href="{{ job.company_url }}" class="experience-title-link" target="_blank" rel="noopener">{{ job.position }} at {{ job.company }}</a>
+                                {% if job.position == job.company %}
+                                <a href="{{ job.company_url }}" class="experience-title-link" target="_blank" rel="noopener">{{ job.position }}</a>
+                                {% else %}
+                                <a href="{{ job.company_url }}" class="experience-title-link" target="_blank" rel="noopener">{{ job.position }} at {{ job.company }}</a>
+                                {% endif %}
                             {% else %}
-                            {{ job.position }} at {{ job.company }}
+                                {% if job.position == job.company %}
+                                {{ job.position }}
+                                {% else %}
+                                {{ job.position }} at {{ job.company }}
+                                {% endif %}
                             {% endif %}
                         </div>
                         {% if job.location %}
