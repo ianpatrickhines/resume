@@ -13,4 +13,6 @@ node_modules/
 # Temporary files
 /tmp/
 *.tmp
-*.temp
+*.temp_site/
+.jekyll-cache/
+.sass-cache/

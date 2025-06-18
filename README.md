@@ -1,22 +1,24 @@
 # Read.cv Style Resume Template
 
-A clean, fast-loading resume/profile template inspired by read.cv, designed for GitHub Pages deployment.
+A clean, fast-loading resume/profile template inspired by read.cv, designed for GitHub Pages deployment with YAML-based content management.
 
 ## Features
 
+- **Data-Driven Content**: All content managed through YAML files - no HTML editing required
+- **Safe Content Updates**: Separate content from structure to prevent breaking changes
+- **Jekyll Integration**: Built for GitHub Pages with Jekyll templating
 - **Fast Loading**: Optimized for minimal file size and quick page loads
 - **Responsive**: Works perfectly on desktop and mobile devices
 - **Accessible**: Semantic HTML with proper ARIA support and keyboard navigation
 - **Clean Design**: Minimalist aesthetic inspired by read.cv
 - **System Fonts**: Uses default system fonts for optimal performance
 - **Smooth Animations**: Subtle hover effects and transitions
-- **GitHub Pages Ready**: Deploy instantly to GitHub Pages
 
 ## Sections Included
 
 - **Header**: Name, title, bio, and contact links
 - **Experience**: Work history with company logos and descriptions
-- **Education**: Academic background
+- **Education**: Academic background (optional)
 - **Projects**: Portfolio projects with links
 - **Skills**: Technology and skill tags
 - **Awards**: Optional achievements section
@@ -30,81 +32,100 @@ A clean, fast-loading resume/profile template inspired by read.cv, designed for 
    - Your site will be available at `https://yourusername.github.io/hines.digital`
 
 2. **Customize Your Content**:
-   - Edit `index.html` to replace the example content with your information
-   - Update the `<title>` and meta description
-   - Replace placeholder text with your actual details
+   - Edit `_data/resume.yml` to update all your information
+   - No HTML editing required - all content is managed through the YAML file
+   - The template automatically builds your resume from the data
 
-## Customization Guide
+## Content Management
 
-### Personal Information
-Replace these sections in `index.html`:
+All content is managed through the `_data/resume.yml` file. This approach:
 
-```html
-<!-- Update header section -->
-<h1>Your Name</h1>
-<p class="subtitle">Your Professional Title</p>
-<div class="bio">
-    <p>Your bio here...</p>
-</div>
+- ✅ **Safe**: Prevents accidental HTML structure breaks
+- ✅ **User-friendly**: No need to understand HTML/CSS
+- ✅ **Maintainable**: Clean separation of content and presentation
+- ✅ **Version-controlled**: Easy to track content changes
 
-<!-- Update contact links -->
-<a href="mailto:your.email@example.com" class="contact-link">
+### Editing Your Resume
+
+Simply edit the `_data/resume.yml` file with your information:
+
+```yaml
+# Personal Information
+personal:
+  name: "Jane Smith"
+  title: "Senior Product Designer"
+  bio: "Passionate designer with 8+ years creating user-centered digital experiences..."
+  avatar: "👩‍💼"
+
+# Contact Information  
+contact:
+  email: "jane.smith@example.com"
+  linkedin: "https://linkedin.com/in/janesmith"
+  github: "https://github.com/janesmith"
+  # Add more as needed
 ```
 
-### Experience Section
-Add or modify experience entries:
+## Advanced Customization
 
-```html
-<article class="card">
-    <div class="item-header">
-        <div class="item-logo">CO</div> <!-- Company initials -->
-        <div class="item-content">
-            <h3 class="item-title">Job Title</h3>
-            <p class="item-subtitle">Company Name</p>
-            <p class="item-period">Start Date - End Date</p>
-        </div>
-    </div>
-    <div class="item-description">
-        <p>Job description and achievements...</p>
-    </div>
-</article>
+### Adding/Removing Sections
+
+Edit `_data/resume.yml` to show/hide sections:
+
+```yaml
+settings:
+  show_awards: false     # Hide awards section
+  show_education: true   # Show education section
 ```
 
-### Projects Section
-Add your projects:
+### Adding Experience
 
-```html
-<article class="card">
-    <h3 class="item-title">Project Name</h3>
-    <p class="item-description">Project description...</p>
-    <div class="project-links">
-        <a href="https://project-demo.com" class="project-link">
-            <span>🔗</span> Live Demo
-        </a>
-        <a href="https://github.com/user/repo" class="project-link">
-            <span>🐙</span> GitHub
-        </a>
-    </div>
-</article>
+```yaml
+experience:
+  - company: "Google"
+    logo: "GO"  # Can use emoji, initials, or image URL
+    position: "Senior UX Designer"
+    period: "2022 - Present"
+    description: "Lead design for mobile apps serving 50M+ users..."
 ```
 
-### Skills Section
-Update your skills:
+### Adding Projects
 
-```html
-<div class="skills-grid">
-    <span class="skill-tag">Your Skill</span>
-    <span class="skill-tag">Another Skill</span>
-    <!-- Add more skills -->
-</div>
+```yaml
+projects:
+  - name: "Mobile App Redesign"
+    description: "Complete redesign improving conversion by 40%..."
+    links:
+      - name: "Case Study"
+        url: "https://portfolio.com/project"
+        icon: "📋"
+      - name: "Live App"
+        url: "https://app.com"
+        icon: "📱"
+```
+
+### Updating Skills
+
+```yaml
+skills:
+  - "Figma"
+  - "Sketch"
+  - "User Research"
+  - "Prototyping"
+  # Add your skills here
 ```
 
 ## Styling Customization
 
-The template uses inline CSS for maximum performance. To customize:
-
 ### Colors
-Update these CSS variables in the `<style>` section:
+Update the theme color in `_data/resume.yml`:
+
+```yaml
+settings:
+  theme_color: "#d45087"  # Changes link and accent colors
+```
+
+### Advanced Styling
+For advanced styling changes, edit the CSS in `index.html`:
 
 ```css
 /* Main colors */
@@ -114,29 +135,13 @@ color: #0066cc;        /* Link color */
 border: 1px solid #eee; /* Border color */
 ```
 
-### Typography
-The template uses system fonts for optimal performance:
-
-```css
-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-```
-
-### Layout
-Adjust the container width:
-
-```css
-.container {
-    max-width: 800px; /* Change this value */
-}
-```
-
 ## Performance Features
 
 - **Inline CSS**: Eliminates additional HTTP requests
 - **System Fonts**: No web font loading delays
 - **Optimized Images**: Uses emoji icons instead of image files
+- **Jekyll Static Generation**: Pre-built HTML for maximum speed
 - **Minimal JavaScript**: Zero JavaScript for maximum speed
-- **Efficient CSS**: Minimal, optimized styles
 
 ## Browser Support
 
@@ -145,31 +150,22 @@ Adjust the container width:
 - Safari (latest)
 - Mobile browsers
 
-## Advanced Customization
+## Jekyll Development
 
-### Adding Company Logos
-Replace emoji placeholders with actual logos:
+To develop locally:
 
-```html
-<div class="item-logo">
-    <img src="logo.png" alt="Company Logo" width="48" height="48">
-</div>
-```
+1. Install Jekyll: `gem install jekyll bundler`
+2. Build site: `jekyll build`
+3. Serve locally: `jekyll serve`
+4. View at: `http://localhost:4000`
 
-### Custom Icons
-Replace emoji icons with custom SVG icons for a more professional look.
+## GitHub Pages Compatibility
 
-### Additional Sections
-Add new sections by following the existing pattern:
+This template is fully compatible with GitHub Pages' Jekyll processing. Simply push changes to your repository and GitHub will automatically build and deploy your site.
 
-```html
-<section class="section">
-    <h2>Section Title</h2>
-    <article class="card">
-        <!-- Content here -->
-    </article>
-</section>
-```
+## Migration from HTML Editing
+
+If you were previously editing the HTML directly, simply copy your content to the appropriate sections in `_data/resume.yml`. The template will automatically generate the HTML structure.
 
 ## License
 

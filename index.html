@@ -1,12 +1,14 @@
+---
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile - Hines Digital</title>
-    <meta name="description" content="Professional profile and resume">
+    <title>{{ site.data.resume.personal.name }} - {{ site.data.resume.personal.title }}</title>
+    <meta name="description" content="{{ site.data.resume.personal.bio | truncate: 160 }}">
     <meta name="robots" content="index, follow">
-    <meta name="theme-color" content="#ffffff">
+    <meta name="theme-color" content="{{ site.data.resume.settings.theme_color | default: '#ffffff' }}">
     <style>
         /* Reset and base styles */
         * {
@@ -287,118 +289,110 @@
         <!-- Header Section -->
         <header class="header">
             <div class="avatar">
-                👤
+                {{ site.data.resume.personal.avatar }}
             </div>
-            <h1>Your Name</h1>
-            <p class="subtitle">Your Professional Title</p>
+            <h1>{{ site.data.resume.personal.name }}</h1>
+            <p class="subtitle">{{ site.data.resume.personal.title }}</p>
             <div class="bio">
-                <p>A brief, compelling bio that captures your professional essence. Keep it concise but memorable, highlighting what makes you unique and the value you bring.</p>
+                <p>{{ site.data.resume.personal.bio }}</p>
             </div>
             <nav class="contact-links">
-                <a href="mailto:your.email@example.com" class="contact-link">
+                {% if site.data.resume.contact.email %}
+                <a href="mailto:{{ site.data.resume.contact.email }}" class="contact-link">
                     <span>📧</span>
                     Email
                 </a>
-                <a href="https://linkedin.com/in/yourprofile" class="contact-link" target="_blank" rel="noopener">
+                {% endif %}
+                {% if site.data.resume.contact.linkedin %}
+                <a href="{{ site.data.resume.contact.linkedin }}" class="contact-link" target="_blank" rel="noopener">
                     <span>🔗</span>
                     LinkedIn
                 </a>
-                <a href="https://github.com/yourusername" class="contact-link" target="_blank" rel="noopener">
+                {% endif %}
+                {% if site.data.resume.contact.github %}
+                <a href="{{ site.data.resume.contact.github }}" class="contact-link" target="_blank" rel="noopener">
                     <span>🐙</span>
                     GitHub
                 </a>
-                <a href="https://twitter.com/yourusername" class="contact-link" target="_blank" rel="noopener">
+                {% endif %}
+                {% if site.data.resume.contact.twitter %}
+                <a href="{{ site.data.resume.contact.twitter }}" class="contact-link" target="_blank" rel="noopener">
                     <span>🐦</span>
                     Twitter
                 </a>
+                {% endif %}
+                {% if site.data.resume.contact.website %}
+                <a href="{{ site.data.resume.contact.website }}" class="contact-link" target="_blank" rel="noopener">
+                    <span>🌐</span>
+                    Website
+                </a>
+                {% endif %}
             </nav>
         </header>
 
         <!-- Experience Section -->
         <section class="section">
             <h2>Experience</h2>
-            
+            {% for job in site.data.resume.experience %}
             <article class="card">
                 <div class="item-header">
-                    <div class="item-logo">C1</div>
+                    <div class="item-logo">{{ job.logo }}</div>
                     <div class="item-content">
-                        <h3 class="item-title">Senior Software Engineer</h3>
-                        <p class="item-subtitle">Company Name</p>
-                        <p class="item-period">Jan 2022 - Present</p>
+                        <h3 class="item-title">{{ job.position }}</h3>
+                        <p class="item-subtitle">{{ job.company }}</p>
+                        <p class="item-period">{{ job.period }}</p>
                     </div>
                 </div>
                 <div class="item-description">
-                    <p>Led development of key features that improved user engagement by 40%. Mentored junior developers and established best practices for code quality and testing.</p>
+                    <p>{{ job.description }}</p>
                 </div>
             </article>
-
-            <article class="card">
-                <div class="item-header">
-                    <div class="item-logo">C2</div>
-                    <div class="item-content">
-                        <h3 class="item-title">Software Engineer</h3>
-                        <p class="item-subtitle">Previous Company</p>
-                        <p class="item-period">Jun 2020 - Dec 2021</p>
-                    </div>
-                </div>
-                <div class="item-description">
-                    <p>Built scalable web applications using modern technologies. Collaborated with cross-functional teams to deliver high-quality products on time.</p>
-                </div>
-            </article>
+            {% endfor %}
         </section>
 
         <!-- Education Section -->
+        {% if site.data.resume.settings.show_education != false %}
         <section class="section">
             <h2>Education</h2>
-            
+            {% for edu in site.data.resume.education %}
             <article class="card">
                 <div class="item-header">
-                    <div class="item-logo">🎓</div>
+                    <div class="item-logo">{{ edu.logo }}</div>
                     <div class="item-content">
-                        <h3 class="item-title">Bachelor of Science in Computer Science</h3>
-                        <p class="item-subtitle">University Name</p>
-                        <p class="item-period">2016 - 2020</p>
+                        <h3 class="item-title">{{ edu.degree }}</h3>
+                        <p class="item-subtitle">{{ edu.institution }}</p>
+                        <p class="item-period">{{ edu.period }}</p>
                     </div>
                 </div>
+                {% if edu.description %}
                 <div class="item-description">
-                    <p>Graduated magna cum laude. Focused on software engineering, algorithms, and data structures.</p>
+                    <p>{{ edu.description }}</p>
                 </div>
+                {% endif %}
             </article>
+            {% endfor %}
         </section>
+        {% endif %}
 
         <!-- Projects Section -->
         <section class="section">
             <h2>Projects</h2>
-            
+            {% for project in site.data.resume.projects %}
             <article class="card">
-                <h3 class="item-title">Project Name</h3>
-                <p class="item-description">A brief description of your project, what technologies you used, and what problems it solves. Keep it concise but informative.</p>
+                <h3 class="item-title">{{ project.name }}</h3>
+                <p class="item-description">{{ project.description }}</p>
+                {% if project.links %}
                 <div class="project-links">
-                    <a href="#" class="project-link" target="_blank" rel="noopener">
-                        <span>🔗</span>
-                        Live Demo
+                    {% for link in project.links %}
+                    <a href="{{ link.url }}" class="project-link" target="_blank" rel="noopener">
+                        <span>{{ link.icon }}</span>
+                        {{ link.name }}
                     </a>
-                    <a href="#" class="project-link" target="_blank" rel="noopener">
-                        <span>🐙</span>
-                        GitHub
-                    </a>
+                    {% endfor %}
                 </div>
+                {% endif %}
             </article>
-
-            <article class="card">
-                <h3 class="item-title">Another Project</h3>
-                <p class="item-description">Description of another project showcasing different skills and technologies. Highlight the impact and results achieved.</p>
-                <div class="project-links">
-                    <a href="#" class="project-link" target="_blank" rel="noopener">
-                        <span>🔗</span>
-                        Live Demo
-                    </a>
-                    <a href="#" class="project-link" target="_blank" rel="noopener">
-                        <span>🐙</span>
-                        GitHub
-                    </a>
-                </div>
-            </article>
+            {% endfor %}
         </section>
 
         <!-- Skills Section -->
@@ -407,32 +401,28 @@
             
             <div class="card">
                 <div class="skills-grid">
-                    <span class="skill-tag">JavaScript</span>
-                    <span class="skill-tag">TypeScript</span>
-                    <span class="skill-tag">React</span>
-                    <span class="skill-tag">Node.js</span>
-                    <span class="skill-tag">Python</span>
-                    <span class="skill-tag">SQL</span>
-                    <span class="skill-tag">Git</span>
-                    <span class="skill-tag">AWS</span>
-                    <span class="skill-tag">Docker</span>
-                    <span class="skill-tag">CSS</span>
-                    <span class="skill-tag">HTML</span>
-                    <span class="skill-tag">REST APIs</span>
+                    {% for skill in site.data.resume.skills %}
+                    <span class="skill-tag">{{ skill }}</span>
+                    {% endfor %}
                 </div>
             </div>
         </section>
 
         <!-- Awards Section (Optional) -->
+        {% if site.data.resume.settings.show_awards != false and site.data.resume.awards %}
         <section class="section">
             <h2>Awards</h2>
-            
+            {% for award in site.data.resume.awards %}
             <article class="card">
-                <h3 class="item-title">Outstanding Performance Award</h3>
-                <p class="item-subtitle">Company Name • 2023</p>
-                <p class="item-description">Recognized for exceptional contributions to the team and delivering high-impact projects.</p>
+                <h3 class="item-title">{{ award.title }}</h3>
+                <p class="item-subtitle">{{ award.organization }} • {{ award.year }}</p>
+                {% if award.description %}
+                <p class="item-description">{{ award.description }}</p>
+                {% endif %}
             </article>
+            {% endfor %}
         </section>
+        {% endif %}
     </div>
 </body>
 </html>

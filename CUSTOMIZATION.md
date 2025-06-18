@@ -1,227 +1,250 @@
-# Customization Examples
+# YAML Content Customization Guide
 
-This file provides specific examples of how to customize the template with your own content.
+This file provides specific examples of how to customize your resume content using the `_data/resume.yml` file.
 
-## Header Section Customization
+## Overview
 
-Replace the placeholder header with your information:
+All content is managed through `_data/resume.yml`. This approach:
+- **Prevents HTML breaking**: Content is separate from structure
+- **Easy to edit**: Simple YAML format, no HTML knowledge required
+- **Version controlled**: Easy to track changes over time
+- **Safe updates**: Template structure remains intact
 
-```html
-<!-- Before -->
-<h1>Your Name</h1>
-<p class="subtitle">Your Professional Title</p>
+## Personal Information
 
-<!-- After -->
-<h1>Jane Smith</h1>
-<p class="subtitle">Senior Product Designer</p>
+Update your basic information:
+
+```yaml
+personal:
+  name: "Jane Smith"
+  title: "Senior Product Designer"
+  bio: "Passionate designer with 8+ years creating user-centered digital experiences. Led design teams at Fortune 500 companies, improving user satisfaction by 40%."
+  avatar: "👩‍💼"  # Can be emoji or image URL
 ```
 
-## Contact Links
+## Contact Information
 
-Update contact information:
+Add your contact details:
 
-```html
-<!-- Email -->
-<a href="mailto:jane.smith@example.com" class="contact-link">
-
-<!-- LinkedIn -->
-<a href="https://linkedin.com/in/janesmith" class="contact-link">
-
-<!-- GitHub -->
-<a href="https://github.com/janesmith" class="contact-link">
-
-<!-- Portfolio Website -->
-<a href="https://janesmith.design" class="contact-link">
-    <span>🌐</span>
-    Portfolio
-</a>
+```yaml
+contact:
+  email: "jane.smith@example.com"
+  linkedin: "https://linkedin.com/in/janesmith"
+  github: "https://github.com/janesmith"
+  twitter: "https://twitter.com/janesmith"
+  website: "https://janesmith.design"
+  phone: "+1 (555) 123-4567"  # Optional
 ```
+
+**Note**: Only include the platforms you want to display. Remove or comment out (#) any you don't want.
 
 ## Experience Section
 
 Add your work history:
 
-```html
-<article class="card">
-    <div class="item-header">
-        <div class="item-logo">GO</div> <!-- Google -->
-        <div class="item-content">
-            <h3 class="item-title">Senior Product Designer</h3>
-            <p class="item-subtitle">Google</p>
-            <p class="item-period">March 2022 - Present</p>
-        </div>
-    </div>
-    <div class="item-description">
-        <p>Lead design for Google Workspace mobile apps, improving user engagement by 35%. Manage a team of 4 designers and collaborate with engineering teams across 3 time zones.</p>
-    </div>
-</article>
-```
-
-## Skills Customization
-
-Update with your specific skills:
-
-```html
-<!-- For a Developer -->
-<div class="skills-grid">
-    <span class="skill-tag">JavaScript</span>
-    <span class="skill-tag">React</span>
-    <span class="skill-tag">Node.js</span>
-    <span class="skill-tag">Python</span>
-    <span class="skill-tag">AWS</span>
-    <span class="skill-tag">Docker</span>
-    <span class="skill-tag">PostgreSQL</span>
-    <span class="skill-tag">Git</span>
-</div>
-
-<!-- For a Designer -->
-<div class="skills-grid">
-    <span class="skill-tag">Figma</span>
-    <span class="skill-tag">Sketch</span>
-    <span class="skill-tag">Adobe Creative Suite</span>
-    <span class="skill-tag">Prototyping</span>
-    <span class="skill-tag">User Research</span>
-    <span class="skill-tag">Design Systems</span>
-    <span class="skill-tag">HTML/CSS</span>
-    <span class="skill-tag">Accessibility</span>
-</div>
-```
-
-## Projects Section
-
-Showcase your best work:
-
-```html
-<article class="card">
-    <h3 class="item-title">E-commerce Mobile App Redesign</h3>
-    <p class="item-description">Complete redesign of a shopping app serving 2M+ users. Improved conversion rate by 28% and reduced checkout abandonment by 40%. Led user research, wireframing, and design system creation.</p>
-    <div class="project-links">
-        <a href="https://dribbble.com/shots/project" class="project-link" target="_blank" rel="noopener">
-            <span>🎨</span>
-            Design
-        </a>
-        <a href="https://apps.apple.com/app/project" class="project-link" target="_blank" rel="noopener">
-            <span>📱</span>
-            App Store
-        </a>
-    </div>
-</article>
+```yaml
+experience:
+  - company: "Google"
+    logo: "🔵"  # Can be emoji, initials like "GO", or image URL
+    position: "Senior Product Designer"
+    period: "March 2022 - Present"
+    description: "Lead design for Google Workspace mobile apps, improving user engagement by 35%. Manage a team of 4 designers and collaborate with engineering teams across 3 time zones."
+  
+  - company: "Airbnb"
+    logo: "🏠"
+    position: "Product Designer"
+    period: "January 2020 - February 2022"
+    description: "Designed core booking flow improvements that increased conversion rate by 28%. Led user research initiatives and established design system components."
 ```
 
 ## Education Section
 
 Add your educational background:
 
-```html
-<article class="card">
-    <div class="item-header">
-        <div class="item-logo">MIT</div>
-        <div class="item-content">
-            <h3 class="item-title">Master of Science in Computer Science</h3>
-            <p class="item-subtitle">Massachusetts Institute of Technology</p>
-            <p class="item-period">2018 - 2020</p>
-        </div>
-    </div>
-    <div class="item-description">
-        <p>Specialized in Human-Computer Interaction and Machine Learning. Thesis: "Improving Mobile App Usability Through AI-Driven Interface Adaptation"</p>
-    </div>
-</article>
+```yaml
+education:
+  - institution: "Stanford University"
+    logo: "🌲"  # Can be emoji, initials, or image URL
+    degree: "Master of Science in Human-Computer Interaction"
+    period: "2018 - 2020"
+    description: "Specialized in user experience design and cognitive psychology. Thesis: 'Mobile Interface Optimization Through Behavioral Analysis'"
+  
+  - institution: "UC Berkeley"
+    logo: "🐻"
+    degree: "Bachelor of Arts in Psychology"
+    period: "2014 - 2018"
+    description: "Magna cum laude. Focus on cognitive science and design psychology."
 ```
 
-## Color Scheme Customization
+## Projects Section
 
-To change the color scheme, update these CSS values:
+Showcase your work:
 
-```css
-/* Professional Blue Theme */
-a { color: #0066cc; }
-a:hover { color: #004499; }
-.contact-link:hover { background-color: #f8f9ff; }
-
-/* Warm Theme */
-a { color: #d45087; }
-a:hover { color: #b73e6f; }
-.contact-link:hover { background-color: #fdf8fa; }
-
-/* Dark Mode Theme */
-body { background-color: #1a1a1a; color: #e0e0e0; }
-.card { background: #2d2d2d; border-color: #404040; }
-a { color: #66b3ff; }
+```yaml
+projects:
+  - name: "E-commerce Mobile App Redesign"
+    description: "Complete redesign of a shopping app serving 2M+ users. Improved conversion rate by 28% and reduced checkout abandonment by 40%. Led user research, wireframing, and design system creation."
+    links:
+      - name: "Case Study"
+        url: "https://janesmith.design/ecommerce-redesign"
+        icon: "📋"
+      - name: "Prototype"
+        url: "https://figma.com/proto/project"
+        icon: "🎨"
+  
+  - name: "AI-Powered Design Assistant"
+    description: "Built a Figma plugin that uses machine learning to suggest design improvements. Used by 10,000+ designers worldwide. Featured in Figma's official blog."
+    links:
+      - name: "Figma Plugin"
+        url: "https://figma.com/community/plugin/ai-assistant"
+        icon: "🔌"
+      - name: "GitHub"
+        url: "https://github.com/janesmith/ai-design-assistant"
+        icon: "🐙"
 ```
 
-## Company Logo Integration
+## Skills Section
 
-Replace emoji placeholders with actual company logos:
+List your technologies and skills:
 
-```html
-<!-- Option 1: Image -->
-<div class="item-logo">
-    <img src="https://logo.clearbit.com/google.com" alt="Google" width="32" height="32">
-</div>
+```yaml
+# For a Designer
+skills:
+  - "Figma"
+  - "Sketch"
+  - "Adobe Creative Suite"
+  - "Prototyping"
+  - "User Research"
+  - "Design Systems"
+  - "HTML/CSS"
+  - "Accessibility"
+  - "A/B Testing"
+  - "Wireframing"
 
-<!-- Option 2: SVG Icon -->
-<div class="item-logo">
-    <svg width="32" height="32" viewBox="0 0 24 24">
-        <!-- SVG path here -->
-    </svg>
-</div>
-
-<!-- Option 3: Font Icon (if using icon font) -->
-<div class="item-logo">
-    <i class="fab fa-google"></i>
-</div>
+# For a Developer
+skills:
+  - "JavaScript"
+  - "TypeScript"
+  - "React"
+  - "Vue.js"
+  - "Node.js"
+  - "Python"
+  - "PostgreSQL"
+  - "AWS"
+  - "Docker"
+  - "Git"
+  - "REST APIs"
+  - "GraphQL"
 ```
 
-## Adding New Sections
+## Awards Section
 
-To add custom sections like Publications or Volunteering:
+Add recognition and achievements:
 
-```html
-<!-- Publications Section -->
-<section class="section">
-    <h2>Publications</h2>
-    <article class="card">
-        <h3 class="item-title">The Future of Mobile Design</h3>
-        <p class="item-subtitle">UX Magazine • December 2023</p>
-        <p class="item-description">An exploration of emerging design patterns in mobile interfaces and their impact on user experience.</p>
-        <div class="project-links">
-            <a href="#" class="project-link" target="_blank" rel="noopener">
-                <span>📖</span>
-                Read Article
-            </a>
-        </div>
-    </article>
-</section>
-
-<!-- Volunteering Section -->
-<section class="section">
-    <h2>Volunteering</h2>
-    <article class="card">
-        <div class="item-header">
-            <div class="item-logo">❤️</div>
-            <div class="item-content">
-                <h3 class="item-title">UX Mentor</h3>
-                <p class="item-subtitle">Design Buddies Community</p>
-                <p class="item-period">2021 - Present</p>
-            </div>
-        </div>
-        <div class="item-description">
-            <p>Mentor junior designers transitioning into UX. Provide portfolio reviews, career guidance, and technical workshops for 50+ mentees.</p>
-        </div>
-    </article>
-</section>
+```yaml
+awards:
+  - title: "Design Excellence Award"
+    organization: "Google"
+    year: "2023"
+    description: "Recognized for outstanding contributions to Google Workspace mobile experience and user satisfaction improvements."
+  
+  - title: "Top Designer Recognition"
+    organization: "Dribbble"
+    year: "2022"
+    description: "Featured as one of the top 10 emerging designers on Dribbble with over 100K followers."
 ```
 
-## Performance Tips
+## Settings Configuration
 
-1. **Optimize Images**: Use WebP format and compress images
-2. **Minimize Custom Fonts**: Stick to system fonts for best performance
-3. **Compress CSS**: Remove unused styles when customizing
-4. **Use CDN**: Host images on a CDN for faster loading
+Control which sections appear:
 
-## GitHub Pages Setup
+```yaml
+settings:
+  show_awards: true       # Set to false to hide awards section
+  show_education: true    # Set to false to hide education section
+  theme_color: "#d45087" # Change the accent color (links, hovers)
+```
 
-1. Enable GitHub Pages in repository settings
-2. Choose "Deploy from a branch" → main
-3. Your site will be live at `https://username.github.io/repository-name`
-4. Custom domain can be configured in Settings → Pages
+## Logo Options
+
+For company/institution logos, you have several options:
+
+```yaml
+# Option 1: Emoji
+logo: "🔵"
+
+# Option 2: Initials
+logo: "GO"  # For Google
+
+# Option 3: Image URL (if you host images)
+logo: "https://logo.clearbit.com/google.com"
+
+# Option 4: Local image (place in assets folder)
+logo: "/assets/logos/google.png"
+```
+
+## Professional Examples
+
+### Tech Professional
+```yaml
+personal:
+  name: "Alex Chen"
+  title: "Full Stack Developer"
+  bio: "Passionate full-stack developer with 6+ years building scalable web applications. Love turning complex problems into simple, elegant solutions."
+  avatar: "👨‍💻"
+
+contact:
+  email: "alex.chen@email.com"
+  linkedin: "https://linkedin.com/in/alexchen"
+  github: "https://github.com/alexchen"
+
+skills:
+  - "JavaScript"
+  - "Python"
+  - "React"
+  - "Django"
+  - "PostgreSQL"
+  - "AWS"
+  - "Docker"
+```
+
+### Marketing Professional
+```yaml
+personal:
+  name: "Sarah Johnson"
+  title: "Digital Marketing Manager"
+  bio: "Data-driven marketing professional specializing in growth hacking and conversion optimization. Increased revenue by 300% across multiple SaaS companies."
+  avatar: "📊"
+
+contact:
+  email: "sarah.johnson@email.com"
+  linkedin: "https://linkedin.com/in/sarahjohnson"
+  website: "https://sarahmarketing.com"
+
+skills:
+  - "Google Analytics"
+  - "A/B Testing"
+  - "SEO/SEM"
+  - "Content Strategy"
+  - "Growth Hacking"
+  - "Conversion Optimization"
+```
+
+## Tips for Great Content
+
+1. **Be Specific**: Use numbers and metrics in descriptions
+2. **Show Impact**: Focus on results and achievements
+3. **Keep it Concise**: 1-2 sentences per description
+4. **Use Action Words**: Led, built, improved, designed, etc.
+5. **Update Regularly**: Keep information current
+
+## Deployment
+
+After editing `_data/resume.yml`:
+
+1. Commit your changes to git
+2. Push to your GitHub repository
+3. GitHub Pages will automatically rebuild your site
+4. Changes will be live within a few minutes
+
+Your resume will automatically update with your new content while maintaining the clean design and structure!

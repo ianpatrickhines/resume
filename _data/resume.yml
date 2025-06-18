@@ -1,0 +1,87 @@
+# Personal Information
+personal:
+  name: "Your Name"
+  title: "Your Professional Title"
+  bio: "A brief, compelling bio that captures your professional essence. Keep it concise but memorable, highlighting what makes you unique and the value you bring."
+  avatar: "👤"
+
+# Contact Information
+contact:
+  email: "your.email@example.com"
+  linkedin: "https://linkedin.com/in/yourprofile"
+  github: "https://github.com/yourusername"
+  twitter: "https://twitter.com/yourusername"
+  website: ""  # Optional
+  phone: ""    # Optional
+
+# Experience
+experience:
+  - company: "Company Name"
+    logo: "C1"  # Can be emoji, initials, or image URL
+    position: "Senior Software Engineer"
+    period: "Jan 2022 - Present"
+    description: "Led development of key features that improved user engagement by 40%. Mentored junior developers and established best practices for code quality and testing."
+  
+  - company: "Previous Company"
+    logo: "C2"
+    position: "Software Engineer"
+    period: "Jun 2020 - Dec 2021"
+    description: "Built scalable web applications using modern technologies. Collaborated with cross-functional teams to deliver high-quality products on time."
+
+# Education
+education:
+  - institution: "University Name"
+    logo: "🎓"
+    degree: "Bachelor of Science in Computer Science"
+    period: "2016 - 2020"
+    description: "Graduated magna cum laude. Focused on software engineering, algorithms, and data structures."
+
+# Projects
+projects:
+  - name: "Project Name"
+    description: "A brief description of your project, what technologies you used, and what problems it solves. Keep it concise but informative."
+    links:
+      - name: "Live Demo"
+        url: "#"
+        icon: "🔗"
+      - name: "GitHub"
+        url: "#"
+        icon: "🐙"
+  
+  - name: "Another Project"
+    description: "Description of another project showcasing different skills and technologies. Highlight the impact and results achieved."
+    links:
+      - name: "Live Demo"
+        url: "#"
+        icon: "🔗"
+      - name: "GitHub"
+        url: "#"
+        icon: "🐙"
+
+# Skills
+skills:
+  - "JavaScript"
+  - "TypeScript"
+  - "React"
+  - "Node.js"
+  - "Python"
+  - "SQL"
+  - "Git"
+  - "AWS"
+  - "Docker"
+  - "CSS"
+  - "HTML"
+  - "REST APIs"
+
+# Awards (Optional)
+awards:
+  - title: "Outstanding Performance Award"
+    organization: "Company Name"
+    year: "2023"
+    description: "Recognized for exceptional contributions to the team and delivering high-impact projects."
+
+# Site Settings
+settings:
+  show_awards: true      # Set to false to hide awards section
+  show_education: true   # Set to false to hide education section
+  theme_color: "#0066cc" # Main accent color
