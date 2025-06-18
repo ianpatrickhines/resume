@@ -59,7 +59,7 @@ personal:
   name: "Jane Smith"
   title: "Senior Product Designer"
   bio: "Passionate designer with 8+ years creating user-centered digital experiences..."
-  avatar: "👩‍💼"
+  avatar: "👩‍💼"  # Emoji, initials, or image URL
 
 # Contact Information  
 contact:
@@ -68,6 +68,16 @@ contact:
   github: "https://github.com/janesmith"
   # Add more as needed
 ```
+
+### Photo Avatars
+
+The avatar field supports multiple formats:
+- **Emoji**: `"👩‍💼"` (displays as emoji)
+- **Initials**: `"JS"` (displays as text)
+- **Image URL**: `"https://example.com/photo.jpg"` (displays as round photo)
+- **Local file**: `"assets/avatar.png"` (relative to repository root)
+
+Image avatars are automatically styled as round, non-draggable photos that perfectly fill the avatar space.
 
 ## Advanced Customization
 
