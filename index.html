@@ -96,53 +96,10 @@
         .container {
             max-width: 600px;
             margin: 0 auto;
-            padding: 6rem 2rem 2rem; /* Top padding for fixed header */
+            padding: 2rem;
         }
 
-        /* Fixed Header */
-        .fixed-header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            background: var(--bg-primary);
-            border-bottom: 1px solid var(--border-primary);
-            padding: 10px 20px;
-            z-index: 100;
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-            gap: 10px;
-        }
 
-        .header-avatar {
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-            background-color: var(--bg-quaternary);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1rem;
-            color: var(--text-muted);
-        }
-
-        .header-content {
-            text-align: right;
-        }
-
-        .header-name {
-            font-size: 16px;
-            font-weight: 600;
-            color: var(--text-primary);
-            margin: 0;
-        }
-
-        .header-cv-link {
-            font-size: 12px;
-            color: var(--text-tertiary);
-            margin: 0;
-        }
 
         /* Profile Header */
         .profile-header {
@@ -172,9 +129,9 @@
 
         .profile-info h1 {
             font-size: 1.375rem;
-            font-weight: 600;
             margin-bottom: 0.125rem;
             line-height: 1.3;
+            color: var(--text-primary);
         }
 
         .profile-links {
@@ -183,54 +140,59 @@
         }
 
         .profile-link {
-            color: var(--accent-primary);
+            color: #666666;
             text-decoration: none;
-            font-size: 14px;
+            font-size: 12px;
+            background: #f6f6f6;
+            padding: 4px 8px;
+            border-radius: 12px;
+            display: inline-block;
         }
 
         .profile-link:hover {
-            color: var(--accent-secondary);
+            color: #555555;
         }
 
-        /* Two-column layout */
+        /* Stacked layout */
         .section {
             display: flex;
+            flex-direction: column;
             margin-bottom: 1.25rem;
-            gap: 1.5rem;
+            gap: 0;
         }
 
         .section-label {
-            flex: 0 0 140px;
+            width: 100%;
             font-size: 13px;
-            font-weight: 600;
             color: var(--text-primary);
             padding-top: 0.25rem;
+            padding-bottom: 0.75rem;
         }
 
         .section-content {
-            flex: 1;
+            width: 100%;
         }
 
         /* Typography */
         h1 {
             font-size: 1.75rem;
-            font-weight: 600;
             margin-bottom: 0.5rem;
             letter-spacing: -0.02em;
+            color: var(--text-primary);
         }
 
         h2 {
             font-size: 1.5rem;
-            font-weight: 600;
             margin-bottom: 0.75rem;
             margin-top: 2rem;
             letter-spacing: -0.01em;
+            color: var(--text-primary);
         }
 
         h3 {
             font-size: 1rem;
-            font-weight: 600;
             margin-bottom: 1.5rem;
+            color: var(--text-primary);
         }
 
         p {
@@ -248,13 +210,7 @@
             color: var(--accent-secondary);
         }
 
-        /* Contact links for contact section */
-        .contact-links {
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-        }
-
+        /* Contact link for project links */
         .contact-link {
             display: inline-flex;
             align-items: center;
@@ -267,6 +223,8 @@
         .contact-link:hover {
             color: var(--accent-primary);
         }
+
+
 
         /* Section items */
         .section-item {
@@ -424,39 +382,12 @@
             gap: 0.25rem;
         }
 
-        /* Skills */
-        .skills-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-        }
 
-        .skill-tag {
-            background-color: var(--bg-tertiary);
-            color: var(--text-secondary);
-            padding: 0.25rem 0.5rem;
-            border-radius: 4px;
-            font-size: 13px;
-            font-weight: 500;
-            border: 1px solid var(--border-secondary);
-        }
 
         /* Responsive design */
         @media (max-width: 768px) {
             .container {
-                padding: 6rem 1rem 2rem;
-            }
-
-            .fixed-header {
-                padding: 8px 16px;
-            }
-
-            .header-name {
-                font-size: 14px;
-            }
-
-            .header-cv-link {
-                font-size: 11px;
+                padding: 2rem 1rem;
             }
 
             .profile-header {
@@ -470,16 +401,6 @@
                 width: 72px;
                 height: 72px;
                 font-size: 2.5rem;
-            }
-
-            .section {
-                flex-direction: column;
-                gap: 0.5rem;
-            }
-
-            .section-label {
-                flex: none;
-                font-size: 14px;
             }
 
             .experience-item {
@@ -517,101 +438,21 @@
             body {
                 transition: none !important;
             }
-            
-            .theme-toggle {
-                transition: none !important;
-            }
-            
-            .theme-toggle:hover {
-                transform: none !important;
-            }
         }
 
         /* Focus styles */
-        a:focus, .contact-link:focus, .theme-toggle:focus {
+        a:focus, .contact-link:focus {
             outline: 2px solid var(--focus-color);
             outline-offset: 2px;
         }
 
-        /* Theme Toggle */
-        .theme-toggle {
-            position: fixed;
-            top: 1rem;
-            left: 1rem;
-            background: var(--bg-secondary);
-            border: 1px solid var(--border-secondary);
-            border-radius: 8px;
-            padding: 0.5rem;
-            cursor: pointer;
-            font-size: 1.2rem;
-            transition: all 0.2s ease;
-            z-index: 101;
-            display: flex;
-            align-items: center;
-            gap: 0.25rem;
-            box-shadow: 0 2px 8px var(--shadow-light);
-        }
 
-        .theme-toggle:hover {
-            background: var(--bg-tertiary);
-            border-color: var(--border-tertiary);
-            transform: translateY(-1px);
-            box-shadow: 0 4px 12px var(--shadow-light);
-        }
-
-        .theme-toggle:active {
-            transform: translateY(0);
-        }
-
-        .theme-toggle .icon {
-            width: 1.2em;
-            height: 1.2em;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .theme-toggle[data-theme="light"] .light-icon,
-        .theme-toggle[data-theme="dark"] .dark-icon,
-        .theme-toggle[data-theme="auto"] .auto-icon {
-            display: flex;
-        }
-
-        .theme-toggle .light-icon,
-        .theme-toggle .dark-icon,
-        .theme-toggle .auto-icon {
-            display: none;
-        }
-
-        /* Responsive theme toggle */
-        @media (max-width: 768px) {
-            .theme-toggle {
-                top: 0.75rem;
-                left: 0.75rem;
-                padding: 0.4rem;
-                font-size: 1.1rem;
-            }
-        }
     </style>
 </head>
 <body>
-    <!-- Theme Toggle Button -->
-    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme" title="Toggle theme">
-        <div class="icon light-icon">☀️</div>
-        <div class="icon dark-icon">🌙</div>
-        <div class="icon auto-icon">💻</div>
-    </button>
 
-    <!-- Fixed Header -->
-    <header class="fixed-header">
-        <div class="header-content">
-            <div class="header-name">{{ site.data.resume.personal.name }}</div>
-            <div class="header-cv-link">{{ site.data.resume.personal.cv_link | default: "resume.cv" }}</div>
-        </div>
-        <div class="header-avatar">
-            {{ site.data.resume.personal.avatar }}
-        </div>
-    </header>
+
+
 
     <div class="container">
 
@@ -625,88 +466,6 @@
                 <div class="profile-links">
                     {% if site.data.resume.personal.cv_link %}
                     <a href="https://{{ site.data.resume.personal.cv_link }}" class="profile-link" target="_blank" rel="noopener">{{ site.data.resume.personal.cv_link }}</a>
-                    {% endif %}
-                </div>
-            </div>
-        </section>
-
-        <!-- Side Projects Section -->
-        {% if site.data.resume.side_projects and site.data.resume.side_projects.size > 0 %}
-        <section class="section">
-            <div class="section-label">Side Projects</div>
-            <div class="section-content">
-                {% for project in site.data.resume.side_projects %}
-                <div class="experience-item">
-                    <div class="experience-duration">{{ project.year }}</div>
-                    <div class="experience-content">
-                        <div class="experience-title">
-                            {% if project.url %}
-                            <a href="{{ project.url }}" class="experience-title-link" target="_blank" rel="noopener">{{ project.title }}</a>
-                            {% else %}
-                            {{ project.title }}
-                            {% endif %}
-                        </div>
-                        <div class="experience-description">{{ project.description }}</div>
-                    </div>
-                </div>
-                {% endfor %}
-            </div>
-        </section>
-        {% endif %}
-
-        <!-- Teams Section -->
-        {% if site.data.resume.teams and site.data.resume.teams.size > 0 %}
-        <section class="section">
-            <div class="section-label">Teams</div>
-            <div class="section-content">
-                {% for team in site.data.resume.teams %}
-                <div class="section-item">
-                    <div class="item-year">{{ team.period }}</div>
-                    {% if team.period == "Current" %}
-                    <div class="teams-icon">{{ team.icon }}</div>
-                    {% endif %}
-                    <div class="item-title">{{ team.name }}</div>
-                    <div class="item-description">{{ team.description }}</div>
-                </div>
-                {% endfor %}
-            </div>
-        </section>
-        {% endif %}
-
-        <!-- Contact Section -->
-        <section class="section">
-            <div class="section-label">Contact</div>
-            <div class="section-content">
-                <div class="contact-links">
-                    {% if site.data.resume.contact.email %}
-                    <a href="mailto:{{ site.data.resume.contact.email }}" class="contact-link">
-                        <span>📧</span>
-                        {{ site.data.resume.contact.email }}
-                    </a>
-                    {% endif %}
-                    {% if site.data.resume.contact.linkedin %}
-                    <a href="{{ site.data.resume.contact.linkedin }}" class="contact-link" target="_blank" rel="noopener">
-                        <span>🔗</span>
-                        LinkedIn
-                    </a>
-                    {% endif %}
-                    {% if site.data.resume.contact.github %}
-                    <a href="{{ site.data.resume.contact.github }}" class="contact-link" target="_blank" rel="noopener">
-                        <span>🐙</span>
-                        GitHub
-                    </a>
-                    {% endif %}
-                    {% if site.data.resume.contact.twitter %}
-                    <a href="{{ site.data.resume.contact.twitter }}" class="contact-link" target="_blank" rel="noopener">
-                        <span>🐦</span>
-                        Twitter
-                    </a>
-                    {% endif %}
-                    {% if site.data.resume.contact.website %}
-                    <a href="{{ site.data.resume.contact.website }}" class="contact-link" target="_blank" rel="noopener">
-                        <span>🌐</span>
-                        Website
-                    </a>
                     {% endif %}
                 </div>
             </div>
@@ -751,13 +510,81 @@
             <div class="section-label">Education</div>
             <div class="section-content">
                 {% for edu in site.data.resume.education %}
-                <div class="section-item">
-                    <div class="item-year">{{ edu.period }}</div>
-                    <div class="item-title">{{ edu.degree }}</div>
-                    <div class="item-subtitle">{{ edu.institution }}</div>
-                    {% if edu.description %}
-                    <div class="item-description">{{ edu.description }}</div>
-                    {% endif %}
+                <div class="experience-item">
+                    <div class="experience-duration">{{ edu.period }}</div>
+                    <div class="experience-content">
+                        <div class="experience-title">{{ edu.degree }}</div>
+                        <div class="experience-location">{{ edu.institution }}</div>
+                        {% if edu.description %}
+                        <div class="experience-description">{{ edu.description }}</div>
+                        {% endif %}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+        {% endif %}
+
+        <!-- Skills Section -->
+        <section class="section">
+            <div class="section-label">Skills</div>
+            <div class="section-content">
+                <div class="skills-text">
+                    {{ site.data.resume.skills | join: ', ' }}
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="section">
+            <div class="section-label">Client Projects</div>
+            <div class="section-content">
+                {% for project in site.data.resume.projects %}
+                <div class="experience-item">
+                    <div class="experience-duration">{{ project.year }}</div>
+                    <div class="experience-content">
+                        <div class="experience-title">
+                            {% if project.url %}
+                            <a href="{{ project.url }}" class="experience-title-link" target="_blank" rel="noopener">{{ project.name }}</a>
+                            {% else %}
+                            {{ project.name }}
+                            {% endif %}
+                        </div>
+                        <div class="experience-description">{{ project.description }}</div>
+                        {% if project.links %}
+                        <div class="project-links">
+                            {% for link in project.links %}
+                            <a href="{{ link.url }}" class="contact-link" target="_blank" rel="noopener">
+                                <span>{{ link.icon }}</span>
+                                {{ link.name }}
+                            </a>
+                            {% endfor %}
+                        </div>
+                        {% endif %}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+
+        <!-- Side Projects Section -->
+        {% if site.data.resume.side_projects and site.data.resume.side_projects.size > 0 %}
+        <section class="section">
+            <div class="section-label">Personal Projects</div>
+            <div class="section-content">
+                {% for project in site.data.resume.side_projects %}
+                <div class="experience-item">
+                    <div class="experience-duration">{{ project.year }}</div>
+                    <div class="experience-content">
+                        <div class="experience-title">
+                            {% if project.url %}
+                            <a href="{{ project.url }}" class="experience-title-link" target="_blank" rel="noopener">{{ project.title }}</a>
+                            {% else %}
+                            {{ project.title }}
+                            {% endif %}
+                        </div>
+                        <div class="experience-description">{{ project.description }}</div>
+                    </div>
                 </div>
                 {% endfor %}
             </div>
@@ -812,114 +639,84 @@
         </section>
         {% endif %}
 
-        <!-- Projects Section -->
+
+
+        <!-- Contact Section -->
         <section class="section">
-            <div class="section-label">Projects</div>
+            <div class="section-label">Contact</div>
             <div class="section-content">
-                {% for project in site.data.resume.projects %}
+                {% if site.data.resume.contact.email %}
                 <div class="experience-item">
-                    <div class="experience-duration">{{ project.year }}</div>
+                    <div class="experience-duration">Email</div>
                     <div class="experience-content">
-                        <div class="experience-title">
-                            {% if project.url %}
-                            <a href="{{ project.url }}" class="experience-title-link" target="_blank" rel="noopener">{{ project.name }}</a>
-                            {% else %}
-                            {{ project.name }}
-                            {% endif %}
+                        <div class="experience-description">
+                            <a href="mailto:{{ site.data.resume.contact.email }}">{{ site.data.resume.contact.email }}</a>
                         </div>
-                        <div class="experience-description">{{ project.description }}</div>
-                        {% if project.links %}
-                        <div class="project-links">
-                            {% for link in project.links %}
-                            <a href="{{ link.url }}" class="contact-link" target="_blank" rel="noopener">
-                                <span>{{ link.icon }}</span>
-                                {{ link.name }}
-                            </a>
-                            {% endfor %}
-                        </div>
-                        {% endif %}
                     </div>
                 </div>
-                {% endfor %}
+                {% endif %}
+                {% if site.data.resume.contact.linkedin %}
+                <div class="experience-item">
+                    <div class="experience-duration">LinkedIn</div>
+                    <div class="experience-content">
+                        <div class="experience-description">
+                            <a href="{{ site.data.resume.contact.linkedin }}" target="_blank" rel="noopener">{{ site.data.resume.contact.linkedin | remove: 'https://' | remove: 'http://' }}</a>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+                {% if site.data.resume.contact.github %}
+                <div class="experience-item">
+                    <div class="experience-duration">GitHub</div>
+                    <div class="experience-content">
+                        <div class="experience-description">
+                            <a href="{{ site.data.resume.contact.github }}" target="_blank" rel="noopener">{{ site.data.resume.contact.github | remove: 'https://' | remove: 'http://' }}</a>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+                {% if site.data.resume.contact.twitter %}
+                <div class="experience-item">
+                    <div class="experience-duration">Twitter</div>
+                    <div class="experience-content">
+                        <div class="experience-description">
+                            <a href="{{ site.data.resume.contact.twitter }}" target="_blank" rel="noopener">{{ site.data.resume.contact.twitter | remove: 'https://' | remove: 'http://' }}</a>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+                {% if site.data.resume.contact.website %}
+                <div class="experience-item">
+                    <div class="experience-duration">Website</div>
+                    <div class="experience-content">
+                        <div class="experience-description">
+                            <a href="{{ site.data.resume.contact.website }}" target="_blank" rel="noopener">{{ site.data.resume.contact.website | remove: 'https://' | remove: 'http://' }}</a>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+                {% if site.data.resume.contact.phone %}
+                <div class="experience-item">
+                    <div class="experience-duration">Phone</div>
+                    <div class="experience-content">
+                        <div class="experience-description">
+                            <a href="tel:{{ site.data.resume.contact.phone }}">{{ site.data.resume.contact.phone }}</a>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
             </div>
         </section>
 
-        <!-- Skills Section -->
-        <section class="section">
-            <div class="section-label">Skills</div>
-            <div class="section-content">
-                <div class="skills-list">
-                    {% for skill in site.data.resume.skills %}
-                    <span class="skill-tag">{{ skill }}</span>
-                    {% endfor %}
-                </div>
-            </div>
-        </section>
+
 
     </div>
 
     <script>
-        // Theme management
+        // Set theme to system default
         (function() {
-            const THEMES = ['light', 'dark', 'auto'];
-            const THEME_LABELS = {
-                'light': 'Switch to dark theme',
-                'dark': 'Switch to auto theme', 
-                'auto': 'Switch to light theme'
-            };
-            const STORAGE_KEY = 'resume-theme';
-            
-            const themeToggle = document.getElementById('theme-toggle');
-            const html = document.documentElement;
-            
-            // Get stored theme or default to 'auto'
-            let currentTheme = localStorage.getItem(STORAGE_KEY) || 'auto';
-            
-            function applyTheme(theme) {
-                if (theme === 'auto') {
-                    html.removeAttribute('data-theme');
-                } else {
-                    html.setAttribute('data-theme', theme);
-                }
-                
-                themeToggle.setAttribute('data-theme', theme);
-                themeToggle.setAttribute('aria-label', THEME_LABELS[theme]);
-                themeToggle.setAttribute('title', THEME_LABELS[theme]);
-                localStorage.setItem(STORAGE_KEY, theme);
-            }
-            
-            function getNextTheme(current) {
-                const currentIndex = THEMES.indexOf(current);
-                return THEMES[(currentIndex + 1) % THEMES.length];
-            }
-            
-            function toggleTheme() {
-                currentTheme = getNextTheme(currentTheme);
-                applyTheme(currentTheme);
-            }
-            
-            // Initialize theme
-            applyTheme(currentTheme);
-            
-            // Theme toggle click handler
-            themeToggle.addEventListener('click', toggleTheme);
-            
-            // Keyboard support
-            themeToggle.addEventListener('keydown', (e) => {
-                if (e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault();
-                    toggleTheme();
-                }
-            });
-            
-            // Listen for system theme changes when in auto mode
-            const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-            mediaQuery.addEventListener('change', () => {
-                if (currentTheme === 'auto') {
-                    // Force re-application of auto theme
-                    applyTheme('auto');
-                }
-            });
+            // Always use system theme preference
+            document.documentElement.removeAttribute('data-theme');
         })();
     </script>
 </body>
