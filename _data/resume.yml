@@ -56,12 +56,16 @@ experience:
     logo: "SC"  # Can be emoji, initials, or image URL
     position: "Senior Software Engineer"
     period: "Jan 2022 - Present"
+    location: "New York, NY"  # Optional
+    company_url: "https://samplecompany.com"  # Optional
     description: "Sample experience entry. Led development of key features that improved user engagement by 40%. Mentored junior developers and established best practices for code quality and testing."
   
   - company: "Previous Sample Corp"
     logo: "PS"
     position: "Software Engineer"
     period: "Jun 2020 - Dec 2021"
+    location: "Remote"  # Optional
+    company_url: "https://previouscorp.com"  # Optional
     description: "Sample experience entry. Built scalable web applications using modern technologies. Collaborated with cross-functional teams to deliver high-quality products on time."
 
 # Education
@@ -77,6 +81,7 @@ projects:
   - name: "Sample Project One"
     year: "2024"
     description: "Sample project entry. A brief description of your project, what technologies you used, and what problems it solves. Keep it concise but informative."
+    url: "https://sampleproject1.com"  # Optional main project URL
     image: "https://via.placeholder.com/200x100/cccccc/666666?text=Project+1"  # 200x100px image
     links:
       - name: "Live Demo"
@@ -89,6 +94,7 @@ projects:
   - name: "Sample Project Two"
     year: "2023"
     description: "Another sample project entry showcasing different skills and technologies. Highlight the impact and results achieved."
+    url: "https://sampleproject2.com"  # Optional main project URL
     image: "https://via.placeholder.com/200x100/cccccc/666666?text=Project+2"  # 200x100px image
     links:
       - name: "Live Demo"
