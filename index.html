@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - Hines Digital</title>
+    <meta name="description" content="Professional profile and resume">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#ffffff">
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+            font-size: 16px;
+        }
+
+        /* Container and layout */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        /* Typography */
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            margin-top: 3rem;
+            letter-spacing: -0.01em;
+        }
+
+        h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: #555;
+        }
+
+        a {
+            color: #0066cc;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: #004499;
+        }
+
+        /* Header section */
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin: 0 auto 1rem;
+            background-color: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: #999;
+        }
+
+        .subtitle {
+            font-size: 1.25rem;
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .bio {
+            max-width: 600px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        /* Contact links */
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            transition: all 0.2s ease;
+            font-size: 0.9rem;
+        }
+
+        .contact-link:hover {
+            border-color: #0066cc;
+            background-color: #f8f9ff;
+            transform: translateY(-1px);
+        }
+
+        /* Section cards */
+        .section {
+            margin-bottom: 2rem;
+        }
+
+        .card {
+            background: #fff;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            transition: all 0.2s ease;
+        }
+
+        .card:hover {
+            border-color: #ddd;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            transform: translateY(-1px);
+        }
+
+        /* Experience and Education items */
+        .item-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .item-logo {
+            width: 48px;
+            height: 48px;
+            border-radius: 6px;
+            background-color: #f5f5f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-weight: 600;
+            color: #666;
+        }
+
+        .item-content {
+            flex: 1;
+        }
+
+        .item-title {
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .item-subtitle {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .item-period {
+            color: #888;
+            font-size: 0.85rem;
+        }
+
+        .item-description {
+            margin-top: 1rem;
+            color: #555;
+        }
+
+        /* Skills */
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .skill-tag {
+            display: inline-block;
+            padding: 0.4rem 0.8rem;
+            background-color: #f5f5f5;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: #666;
+            border: 1px solid #e0e0e0;
+            transition: all 0.2s ease;
+        }
+
+        .skill-tag:hover {
+            background-color: #e8e8e8;
+            transform: translateY(-1px);
+        }
+
+        /* Projects */
+        .project-links {
+            margin-top: 0.5rem;
+            display: flex;
+            gap: 1rem;
+        }
+
+        .project-link {
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem 0.75rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.25rem;
+                margin-top: 2rem;
+            }
+
+            .item-header {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .item-logo {
+                align-self: flex-start;
+            }
+
+            .contact-links {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .contact-link {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
+        }
+
+        /* Accessibility improvements */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        /* Focus styles */
+        a:focus, .contact-link:focus, .skill-tag:focus {
+            outline: 2px solid #0066cc;
+            outline-offset: 2px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <div class="avatar">
+                👤
+            </div>
+            <h1>Your Name</h1>
+            <p class="subtitle">Your Professional Title</p>
+            <div class="bio">
+                <p>A brief, compelling bio that captures your professional essence. Keep it concise but memorable, highlighting what makes you unique and the value you bring.</p>
+            </div>
+            <nav class="contact-links">
+                <a href="mailto:your.email@example.com" class="contact-link">
+                    <span>📧</span>
+                    Email
+                </a>
+                <a href="https://linkedin.com/in/yourprofile" class="contact-link" target="_blank" rel="noopener">
+                    <span>🔗</span>
+                    LinkedIn
+                </a>
+                <a href="https://github.com/yourusername" class="contact-link" target="_blank" rel="noopener">
+                    <span>🐙</span>
+                    GitHub
+                </a>
+                <a href="https://twitter.com/yourusername" class="contact-link" target="_blank" rel="noopener">
+                    <span>🐦</span>
+                    Twitter
+                </a>
+            </nav>
+        </header>
+
+        <!-- Experience Section -->
+        <section class="section">
+            <h2>Experience</h2>
+            
+            <article class="card">
+                <div class="item-header">
+                    <div class="item-logo">C1</div>
+                    <div class="item-content">
+                        <h3 class="item-title">Senior Software Engineer</h3>
+                        <p class="item-subtitle">Company Name</p>
+                        <p class="item-period">Jan 2022 - Present</p>
+                    </div>
+                </div>
+                <div class="item-description">
+                    <p>Led development of key features that improved user engagement by 40%. Mentored junior developers and established best practices for code quality and testing.</p>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="item-header">
+                    <div class="item-logo">C2</div>
+                    <div class="item-content">
+                        <h3 class="item-title">Software Engineer</h3>
+                        <p class="item-subtitle">Previous Company</p>
+                        <p class="item-period">Jun 2020 - Dec 2021</p>
+                    </div>
+                </div>
+                <div class="item-description">
+                    <p>Built scalable web applications using modern technologies. Collaborated with cross-functional teams to deliver high-quality products on time.</p>
+                </div>
+            </article>
+        </section>
+
+        <!-- Education Section -->
+        <section class="section">
+            <h2>Education</h2>
+            
+            <article class="card">
+                <div class="item-header">
+                    <div class="item-logo">🎓</div>
+                    <div class="item-content">
+                        <h3 class="item-title">Bachelor of Science in Computer Science</h3>
+                        <p class="item-subtitle">University Name</p>
+                        <p class="item-period">2016 - 2020</p>
+                    </div>
+                </div>
+                <div class="item-description">
+                    <p>Graduated magna cum laude. Focused on software engineering, algorithms, and data structures.</p>
+                </div>
+            </article>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="section">
+            <h2>Projects</h2>
+            
+            <article class="card">
+                <h3 class="item-title">Project Name</h3>
+                <p class="item-description">A brief description of your project, what technologies you used, and what problems it solves. Keep it concise but informative.</p>
+                <div class="project-links">
+                    <a href="#" class="project-link" target="_blank" rel="noopener">
+                        <span>🔗</span>
+                        Live Demo
+                    </a>
+                    <a href="#" class="project-link" target="_blank" rel="noopener">
+                        <span>🐙</span>
+                        GitHub
+                    </a>
+                </div>
+            </article>
+
+            <article class="card">
+                <h3 class="item-title">Another Project</h3>
+                <p class="item-description">Description of another project showcasing different skills and technologies. Highlight the impact and results achieved.</p>
+                <div class="project-links">
+                    <a href="#" class="project-link" target="_blank" rel="noopener">
+                        <span>🔗</span>
+                        Live Demo
+                    </a>
+                    <a href="#" class="project-link" target="_blank" rel="noopener">
+                        <span>🐙</span>
+                        GitHub
+                    </a>
+                </div>
+            </article>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="section">
+            <h2>Skills</h2>
+            
+            <div class="card">
+                <div class="skills-grid">
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">TypeScript</span>
+                    <span class="skill-tag">React</span>
+                    <span class="skill-tag">Node.js</span>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">SQL</span>
+                    <span class="skill-tag">Git</span>
+                    <span class="skill-tag">AWS</span>
+                    <span class="skill-tag">Docker</span>
+                    <span class="skill-tag">CSS</span>
+                    <span class="skill-tag">HTML</span>
+                    <span class="skill-tag">REST APIs</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Awards Section (Optional) -->
+        <section class="section">
+            <h2>Awards</h2>
+            
+            <article class="card">
+                <h3 class="item-title">Outstanding Performance Award</h3>
+                <p class="item-subtitle">Company Name • 2023</p>
+                <p class="item-description">Recognized for exceptional contributions to the team and delivering high-impact projects.</p>
+            </article>
+        </section>
+    </div>
+</body>
+</html>

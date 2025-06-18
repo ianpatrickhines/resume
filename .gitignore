@@ -1,0 +1,16 @@
+# GitHub Pages and Jekyll
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Development files
+.DS_Store
+*.log
+node_modules/
+.env
+
+# Temporary files
+/tmp/
+*.tmp
+*.temp
