@@ -2,6 +2,8 @@
 
 A clean, fast-loading resume/profile template inspired by read.cv, designed for GitHub Pages deployment with YAML-based content management.
 
+**[📖 View Live Demo](https://ianpatrickhines.github.io/resume)** | **[🚀 Get Started](#quick-start)**
+
 ## Features
 
 - **Data-Driven Content**: All content managed through YAML files - no HTML editing required
@@ -31,6 +33,7 @@ A clean, fast-loading resume/profile template inspired by read.cv, designed for 
    - Go to Settings → Pages
    - Select "Deploy from a branch" → main branch
    - Your site will be available at `https://yourusername.github.io/resume`
+   - Example: [https://ianpatrickhines.github.io/resume](https://ianpatrickhines.github.io/resume)
 
 2. **Customize Your Content**:
    - Edit `_data/resume.yml` to update all your information
