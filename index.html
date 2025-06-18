@@ -521,11 +521,16 @@
                 <div class="profile-links">
                     {% if site.data.resume.personal.cv_link %}
                         {% assign cv_link = site.data.resume.personal.cv_link %}
+                        {% if cv_link contains 'http://' or cv_link contains 'https://' %}
+                            {% assign cv_url = cv_link %}
+                        {% else %}
+                            {% assign cv_url = cv_link | prepend: 'https://' %}
+                        {% endif %}
                         {% if cv_link contains 'twitter.com' or cv_link contains 'x.com' %}
                             {% assign username = cv_link | split: '/' | last | split: '?' | first %}
-                            <a href="https://{{ cv_link }}" class="profile-link" target="_blank" rel="noopener">@{{ username }}</a>
+                            <a href="{{ cv_url }}" class="profile-link" target="_blank" rel="noopener">@{{ username }}</a>
                         {% else %}
-                            <a href="https://{{ cv_link }}" class="profile-link" target="_blank" rel="noopener">{{ cv_link }}</a>
+                            <a href="{{ cv_url }}" class="profile-link" target="_blank" rel="noopener">{{ cv_link }}</a>
                         {% endif %}
                     {% endif %}
                 </div>
