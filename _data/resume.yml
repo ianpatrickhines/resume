@@ -84,4 +84,5 @@ awards:
 settings:
   show_awards: true      # Set to false to hide awards section
   show_education: true   # Set to false to hide education section
-  theme_color: "#0066cc" # Main accent color
+  theme_color: "#0066cc" # Main accent color for light theme
+  dark_theme_color: "#5aa3ff" # Main accent color for dark theme (optional, defaults to lighter version)

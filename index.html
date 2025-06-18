@@ -10,6 +10,72 @@
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="{{ site.data.resume.settings.theme_color | default: '#ffffff' }}">
     <style>
+        /* CSS Custom Properties for Theming */
+        :root {
+            /* Light theme colors */
+            --bg-primary: #ffffff;
+            --bg-secondary: #ffffff;
+            --bg-tertiary: #f5f5f5;
+            --bg-quaternary: #f0f0f0;
+            --bg-hover: #f8f9ff;
+            --text-primary: #333333;
+            --text-secondary: #555555;
+            --text-tertiary: #666666;
+            --text-quaternary: #888888;
+            --text-muted: #999999;
+            --accent-primary: {{ site.data.resume.settings.theme_color | default: '#0066cc' }};
+            --accent-secondary: #004499;
+            --border-primary: #eeeeee;
+            --border-secondary: #dddddd;
+            --border-tertiary: #e0e0e0;
+            --shadow-light: rgba(0, 0, 0, 0.05);
+            --focus-color: #0066cc;
+        }
+
+        /* Dark theme colors */
+        [data-theme="dark"] {
+            --bg-primary: #0f0f0f;
+            --bg-secondary: #1a1a1a;
+            --bg-tertiary: #2a2a2a;
+            --bg-quaternary: #333333;
+            --bg-hover: #2a2a3a;
+            --text-primary: #f0f0f0;
+            --text-secondary: #d4d4d4;
+            --text-tertiary: #b8b8b8;
+            --text-quaternary: #9d9d9d;
+            --text-muted: #808080;
+            --accent-primary: {{ site.data.resume.settings.dark_theme_color | default: '#5aa3ff' }};
+            --accent-secondary: #7db8ff;
+            --border-primary: #2a2a2a;
+            --border-secondary: #3a3a3a;
+            --border-tertiary: #4a4a4a;
+            --shadow-light: rgba(0, 0, 0, 0.4);
+            --focus-color: #5aa3ff;
+        }
+
+        /* System theme preference support */
+        @media (prefers-color-scheme: dark) {
+            :root:not([data-theme="light"]) {
+                --bg-primary: #0f0f0f;
+                --bg-secondary: #1a1a1a;
+                --bg-tertiary: #2a2a2a;
+                --bg-quaternary: #333333;
+                --bg-hover: #2a2a3a;
+                --text-primary: #f0f0f0;
+                --text-secondary: #d4d4d4;
+                --text-tertiary: #b8b8b8;
+                --text-quaternary: #9d9d9d;
+                --text-muted: #808080;
+                --accent-primary: {{ site.data.resume.settings.dark_theme_color | default: '#5aa3ff' }};
+                --accent-secondary: #7db8ff;
+                --border-primary: #2a2a2a;
+                --border-secondary: #3a3a3a;
+                --border-tertiary: #4a4a4a;
+                --shadow-light: rgba(0, 0, 0, 0.4);
+                --focus-color: #5aa3ff;
+            }
+        }
+
         /* Reset and base styles */
         * {
             margin: 0;
@@ -20,9 +86,10 @@
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
             line-height: 1.6;
-            color: #333;
-            background-color: #fff;
+            color: var(--text-primary);
+            background-color: var(--bg-primary);
             font-size: 16px;
+            transition: color 0.3s ease, background-color 0.3s ease;
         }
 
         /* Container and layout */
@@ -56,17 +123,17 @@
 
         p {
             margin-bottom: 1rem;
-            color: #555;
+            color: var(--text-secondary);
         }
 
         a {
-            color: #0066cc;
+            color: var(--accent-primary);
             text-decoration: none;
             transition: color 0.2s ease;
         }
 
         a:hover {
-            color: #004499;
+            color: var(--accent-secondary);
         }
 
         /* Header section */
@@ -74,7 +141,7 @@
             text-align: center;
             margin-bottom: 3rem;
             padding-bottom: 2rem;
-            border-bottom: 1px solid #eee;
+            border-bottom: 1px solid var(--border-primary);
         }
 
         .avatar {
@@ -82,17 +149,17 @@
             height: 120px;
             border-radius: 50%;
             margin: 0 auto 1rem;
-            background-color: #f0f0f0;
+            background-color: var(--bg-quaternary);
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 3rem;
-            color: #999;
+            color: var(--text-muted);
         }
 
         .subtitle {
             font-size: 1.25rem;
-            color: #666;
+            color: var(--text-tertiary);
             margin-bottom: 1rem;
         }
 
@@ -117,15 +184,15 @@
             align-items: center;
             gap: 0.5rem;
             padding: 0.5rem 1rem;
-            border: 1px solid #ddd;
+            border: 1px solid var(--border-secondary);
             border-radius: 6px;
             transition: all 0.2s ease;
             font-size: 0.9rem;
         }
 
         .contact-link:hover {
-            border-color: #0066cc;
-            background-color: #f8f9ff;
+            border-color: var(--accent-primary);
+            background-color: var(--bg-hover);
             transform: translateY(-1px);
         }
 
@@ -135,8 +202,8 @@
         }
 
         .card {
-            background: #fff;
-            border: 1px solid #eee;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-primary);
             border-radius: 8px;
             padding: 1.5rem;
             margin-bottom: 1rem;
@@ -144,8 +211,8 @@
         }
 
         .card:hover {
-            border-color: #ddd;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            border-color: var(--border-secondary);
+            box-shadow: 0 2px 8px var(--shadow-light);
             transform: translateY(-1px);
         }
 
@@ -161,13 +228,13 @@
             width: 48px;
             height: 48px;
             border-radius: 6px;
-            background-color: #f5f5f5;
+            background-color: var(--bg-tertiary);
             display: flex;
             align-items: center;
             justify-content: center;
             flex-shrink: 0;
             font-weight: 600;
-            color: #666;
+            color: var(--text-tertiary);
         }
 
         .item-content {
@@ -180,19 +247,19 @@
         }
 
         .item-subtitle {
-            color: #666;
+            color: var(--text-tertiary);
             font-size: 0.9rem;
             margin-bottom: 0.25rem;
         }
 
         .item-period {
-            color: #888;
+            color: var(--text-quaternary);
             font-size: 0.85rem;
         }
 
         .item-description {
             margin-top: 1rem;
-            color: #555;
+            color: var(--text-secondary);
         }
 
         /* Skills */
@@ -205,16 +272,16 @@
         .skill-tag {
             display: inline-block;
             padding: 0.4rem 0.8rem;
-            background-color: #f5f5f5;
+            background-color: var(--bg-tertiary);
             border-radius: 20px;
             font-size: 0.85rem;
-            color: #666;
-            border: 1px solid #e0e0e0;
+            color: var(--text-tertiary);
+            border: 1px solid var(--border-tertiary);
             transition: all 0.2s ease;
         }
 
         .skill-tag:hover {
-            background-color: #e8e8e8;
+            background-color: var(--bg-quaternary);
             transform: translateY(-1px);
         }
 
@@ -275,16 +342,95 @@
                 animation-iteration-count: 1 !important;
                 transition-duration: 0.01ms !important;
             }
+            
+            body {
+                transition: none !important;
+            }
+            
+            .theme-toggle {
+                transition: none !important;
+            }
+            
+            .theme-toggle:hover {
+                transform: none !important;
+            }
         }
 
         /* Focus styles */
-        a:focus, .contact-link:focus, .skill-tag:focus {
-            outline: 2px solid #0066cc;
+        a:focus, .contact-link:focus, .skill-tag:focus, .theme-toggle:focus {
+            outline: 2px solid var(--focus-color);
             outline-offset: 2px;
+        }
+
+        /* Theme Toggle */
+        .theme-toggle {
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-secondary);
+            border-radius: 8px;
+            padding: 0.5rem;
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: all 0.2s ease;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+            box-shadow: 0 2px 8px var(--shadow-light);
+        }
+
+        .theme-toggle:hover {
+            background: var(--bg-tertiary);
+            border-color: var(--border-tertiary);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px var(--shadow-light);
+        }
+
+        .theme-toggle:active {
+            transform: translateY(0);
+        }
+
+        .theme-toggle .icon {
+            width: 1.2em;
+            height: 1.2em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .theme-toggle[data-theme="light"] .light-icon,
+        .theme-toggle[data-theme="dark"] .dark-icon,
+        .theme-toggle[data-theme="auto"] .auto-icon {
+            display: flex;
+        }
+
+        .theme-toggle .light-icon,
+        .theme-toggle .dark-icon,
+        .theme-toggle .auto-icon {
+            display: none;
+        }
+
+        /* Responsive theme toggle */
+        @media (max-width: 768px) {
+            .theme-toggle {
+                top: 0.75rem;
+                right: 0.75rem;
+                padding: 0.4rem;
+                font-size: 1.1rem;
+            }
         }
     </style>
 </head>
 <body>
+    <!-- Theme Toggle Button -->
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme" title="Toggle theme">
+        <div class="icon light-icon">☀️</div>
+        <div class="icon dark-icon">🌙</div>
+        <div class="icon auto-icon">💻</div>
+    </button>
+
     <div class="container">
         <!-- Header Section -->
         <header class="header">
@@ -424,5 +570,70 @@
         </section>
         {% endif %}
     </div>
+
+    <script>
+        // Theme management
+        (function() {
+            const THEMES = ['light', 'dark', 'auto'];
+            const THEME_LABELS = {
+                'light': 'Switch to dark theme',
+                'dark': 'Switch to auto theme', 
+                'auto': 'Switch to light theme'
+            };
+            const STORAGE_KEY = 'resume-theme';
+            
+            const themeToggle = document.getElementById('theme-toggle');
+            const html = document.documentElement;
+            
+            // Get stored theme or default to 'auto'
+            let currentTheme = localStorage.getItem(STORAGE_KEY) || 'auto';
+            
+            function applyTheme(theme) {
+                if (theme === 'auto') {
+                    html.removeAttribute('data-theme');
+                } else {
+                    html.setAttribute('data-theme', theme);
+                }
+                
+                themeToggle.setAttribute('data-theme', theme);
+                themeToggle.setAttribute('aria-label', THEME_LABELS[theme]);
+                themeToggle.setAttribute('title', THEME_LABELS[theme]);
+                localStorage.setItem(STORAGE_KEY, theme);
+            }
+            
+            function getNextTheme(current) {
+                const currentIndex = THEMES.indexOf(current);
+                return THEMES[(currentIndex + 1) % THEMES.length];
+            }
+            
+            function toggleTheme() {
+                currentTheme = getNextTheme(currentTheme);
+                applyTheme(currentTheme);
+            }
+            
+            // Initialize theme
+            applyTheme(currentTheme);
+            
+            // Theme toggle click handler
+            themeToggle.addEventListener('click', toggleTheme);
+            
+            // Keyboard support
+            themeToggle.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    toggleTheme();
+                }
+            });
+            
+            // Listen for system theme changes when in auto mode
+            const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+            mediaQuery.addEventListener('change', () => {
+                if (currentTheme === 'auto') {
+                    // Force re-application of auto theme
+                    applyTheme('auto');
+                }
+            });
+        })();
+    </script>
 </body>
 </html>
