@@ -495,7 +495,13 @@
                 <h1>{{ site.data.resume.personal.name }}</h1>
                 <div class="profile-links">
                     {% if site.data.resume.personal.cv_link %}
-                    <a href="https://{{ site.data.resume.personal.cv_link }}" class="profile-link" target="_blank" rel="noopener">{{ site.data.resume.personal.cv_link }}</a>
+                        {% assign cv_link = site.data.resume.personal.cv_link %}
+                        {% if cv_link contains 'twitter.com' or cv_link contains 'x.com' %}
+                            {% assign username = cv_link | split: '/' | last | split: '?' | first %}
+                            <a href="https://{{ cv_link }}" class="profile-link" target="_blank" rel="noopener">@{{ username }}</a>
+                        {% else %}
+                            <a href="https://{{ cv_link }}" class="profile-link" target="_blank" rel="noopener">{{ cv_link }}</a>
+                        {% endif %}
                     {% endif %}
                 </div>
             </div>
@@ -687,7 +693,7 @@
                 {% endif %}
                 {% if site.data.resume.contact.twitter %}
                 <div class="experience-item">
-                    <div class="experience-duration">Twitter</div>
+                    <div class="experience-duration">X</div>
                     <div class="experience-content">
                         <div class="experience-description">
                             <a href="{{ site.data.resume.contact.twitter }}" target="_blank" rel="noopener">{{ site.data.resume.contact.twitter | remove: 'https://' | remove: 'http://' }}</a>
