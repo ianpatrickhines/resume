@@ -156,14 +156,33 @@ awards:
 
 ## Settings Configuration
 
-Control which sections appear:
+Control which sections appear and customize theme colors:
 
 ```yaml
 settings:
   show_awards: true       # Set to false to hide awards section
   show_education: true    # Set to false to hide education section
-  theme_color: "#d45087" # Change the accent color (links, hovers)
+  theme_color: "#0066cc"  # Main accent color for light theme (links, hovers)
+  dark_theme_color: "#5aa3ff" # Main accent color for dark theme (optional)
 ```
+
+### Dark Mode Support
+
+The resume includes comprehensive dark mode support with:
+
+- **Theme Toggle**: Click the button in the top-right corner to cycle between light, dark, and auto (system) themes
+- **System Integration**: Automatically respects your device's dark mode preference when set to "auto"
+- **WCAG Compliant**: Colors meet accessibility contrast requirements
+- **Smooth Transitions**: Elegant theme switching with proper reduced-motion support
+- **Persistent Preference**: Your theme choice is saved and remembered
+
+**Theme Colors**: The `theme_color` sets the accent color for light mode, while `dark_theme_color` sets it for dark mode. If `dark_theme_color` is not specified, a lighter version of the light theme color is automatically used.
+
+**Custom Colors**: You can use any hex color code. Recommended combinations:
+- Classic Blue: `#0066cc` (light) / `#5aa3ff` (dark)
+- Green: `#22c55e` (light) / `#4ade80` (dark) 
+- Purple: `#8b5cf6` (light) / `#a78bfa` (dark)
+- Red: `#ef4444` (light) / `#f87171` (dark)
 
 ## Logo Options
 

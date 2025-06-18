@@ -7,6 +7,7 @@ A clean, fast-loading resume/profile template inspired by read.cv, designed for 
 - **Data-Driven Content**: All content managed through YAML files - no HTML editing required
 - **Safe Content Updates**: Separate content from structure to prevent breaking changes
 - **Jekyll Integration**: Built for GitHub Pages with Jekyll templating
+- **Dark Mode Support**: Professional dark/light/auto theme toggle with WCAG compliant colors
 - **Fast Loading**: Optimized for minimal file size and quick page loads
 - **Responsive**: Works perfectly on desktop and mobile devices
 - **Accessible**: Semantic HTML with proper ARIA support and keyboard navigation
@@ -117,12 +118,19 @@ skills:
 ## Styling Customization
 
 ### Colors
-Update the theme color in `_data/resume.yml`:
+Update theme colors in `_data/resume.yml`:
 
 ```yaml
 settings:
-  theme_color: "#d45087"  # Changes link and accent colors
+  theme_color: "#0066cc"      # Light theme accent color
+  dark_theme_color: "#5aa3ff" # Dark theme accent color (optional)
 ```
+
+The resume includes comprehensive dark mode support:
+- Theme toggle button (top-right corner) cycles between light/dark/auto modes
+- System preference detection for seamless integration
+- WCAG compliant contrast ratios for accessibility
+- Smooth transitions with reduced-motion support
 
 ### Advanced Styling
 For advanced styling changes, edit the CSS in `index.html`:
