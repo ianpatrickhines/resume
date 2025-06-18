@@ -94,7 +94,7 @@
 
         /* Container and layout */
         .container {
-            max-width: 600px;
+            max-width: 40rem;
             margin: 0 auto;
             padding: 2rem;
         }
@@ -104,7 +104,7 @@
         /* Profile Header */
         .profile-header {
             display: flex;
-            align-items: flex-start;
+            align-items: center;
             gap: 1rem;
             margin-bottom: 1.5rem;
             padding-bottom: 1rem;
@@ -124,7 +124,6 @@
 
         .profile-info {
             flex: 1;
-            padding-top: 0.25rem;
         }
 
         .profile-info h1 {
@@ -163,7 +162,7 @@
 
         .section-label {
             width: 100%;
-            font-size: 13px;
+            font-size: 1rem;
             color: var(--text-primary);
             padding-top: 0.25rem;
             padding-bottom: 0.75rem;
@@ -298,7 +297,7 @@
         }
 
         .experience-description {
-            font-size: 14px;
+            font-size: 0.875rem;
             color: var(--text-secondary);
             line-height: 1.4;
         }
@@ -382,6 +381,12 @@
             gap: 0.25rem;
         }
 
+        /* Contact section specific styling */
+        .contact-section .experience-item {
+            padding-bottom: 0;
+            margin-bottom: 0.5rem;
+        }
+
 
 
         /* Responsive design */
@@ -392,8 +397,8 @@
 
             .profile-header {
                 flex-direction: column;
-                align-items: center;
-                text-align: center;
+                align-items: flex-start;
+                text-align: left;
                 gap: 1rem;
             }
 
@@ -525,16 +530,6 @@
         </section>
         {% endif %}
 
-        <!-- Skills Section -->
-        <section class="section">
-            <div class="section-label">Skills</div>
-            <div class="section-content">
-                <div class="skills-text">
-                    {{ site.data.resume.skills | join: ', ' }}
-                </div>
-            </div>
-        </section>
-
         <!-- Projects Section -->
         <section class="section">
             <div class="section-label">Client Projects</div>
@@ -551,16 +546,6 @@
                             {% endif %}
                         </div>
                         <div class="experience-description">{{ project.description }}</div>
-                        {% if project.links %}
-                        <div class="project-links">
-                            {% for link in project.links %}
-                            <a href="{{ link.url }}" class="contact-link" target="_blank" rel="noopener">
-                                <span>{{ link.icon }}</span>
-                                {{ link.name }}
-                            </a>
-                            {% endfor %}
-                        </div>
-                        {% endif %}
                     </div>
                 </div>
                 {% endfor %}
@@ -642,7 +627,7 @@
 
 
         <!-- Contact Section -->
-        <section class="section">
+        <section class="section contact-section">
             <div class="section-label">Contact</div>
             <div class="section-content">
                 {% if site.data.resume.contact.email %}
