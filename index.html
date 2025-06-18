@@ -94,7 +94,7 @@
 
         /* Container and layout */
         .container {
-            max-width: 1200px;
+            max-width: 600px;
             margin: 0 auto;
             padding: 6rem 2rem 2rem; /* Top padding for fixed header */
         }
@@ -144,19 +144,67 @@
             margin: 0;
         }
 
+        /* Profile Header */
+        .profile-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+        }
+
+        .profile-photo {
+            width: 92px;
+            height: 92px;
+            border-radius: 50%;
+            background-color: var(--bg-tertiary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            flex-shrink: 0;
+        }
+
+        .profile-info {
+            flex: 1;
+            padding-top: 0.25rem;
+        }
+
+        .profile-info h1 {
+            font-size: 1.375rem;
+            font-weight: 600;
+            margin-bottom: 0.125rem;
+            line-height: 1.3;
+        }
+
+        .profile-links {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .profile-link {
+            color: var(--accent-primary);
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .profile-link:hover {
+            color: var(--accent-secondary);
+        }
+
         /* Two-column layout */
         .section {
             display: flex;
-            margin-bottom: 2rem;
-            gap: 2rem;
+            margin-bottom: 1.25rem;
+            gap: 1.5rem;
         }
 
         .section-label {
-            flex: 0 0 200px;
-            font-size: 16px;
-            font-weight: 700;
+            flex: 0 0 140px;
+            font-size: 13px;
+            font-weight: 600;
             color: var(--text-primary);
-            padding-top: 0.5rem;
+            padding-top: 0.25rem;
         }
 
         .section-content {
@@ -165,8 +213,8 @@
 
         /* Typography */
         h1 {
-            font-size: 2.5rem;
-            font-weight: 700;
+            font-size: 1.75rem;
+            font-weight: 600;
             margin-bottom: 0.5rem;
             letter-spacing: -0.02em;
         }
@@ -174,15 +222,15 @@
         h2 {
             font-size: 1.5rem;
             font-weight: 600;
-            margin-bottom: 1rem;
-            margin-top: 3rem;
+            margin-bottom: 0.75rem;
+            margin-top: 2rem;
             letter-spacing: -0.01em;
         }
 
         h3 {
-            font-size: 1.25rem;
+            font-size: 1rem;
             font-weight: 600;
-            margin-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
         }
 
         p {
@@ -222,8 +270,8 @@
 
         /* Section items */
         .section-item {
-            margin-bottom: 1.5rem;
-            padding-bottom: 1rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.75rem;
             border-bottom: 1px solid var(--border-primary);
         }
 
@@ -232,16 +280,80 @@
             margin-bottom: 0;
         }
 
-        .item-year {
-            font-size: 14px;
+        /* Experience item layout - Read.cv style */
+        .experience-item {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 0.75rem;
+            padding-bottom: 0.5rem;
+        }
+
+        .experience-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .experience-duration {
+            flex: 0 0 120px;
+            font-size: 13px;
             color: var(--text-muted);
-            font-style: italic;
-            margin-bottom: 0.5rem;
+            padding-top: 0.125rem;
+        }
+
+        .experience-content {
+            flex: 1;
+        }
+
+        .experience-title {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.125rem;
+            line-height: 1.4;
+        }
+
+        .experience-title-link {
+            color: var(--text-primary);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        .experience-title-link:hover {
+            color: var(--accent-primary);
+        }
+
+        .experience-title-link::after {
+            content: "";
+            width: 12px;
+            height: 12px;
+            background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.5 3C3.22386 3 3 3.22386 3 3.5C3 3.77614 3.22386 4 3.5 4V3ZM8.5 3.5H9C9 3.22386 8.77614 3 8.5 3V3.5ZM8 8.5C8 8.77614 8.22386 9 8.5 9C8.77614 9 9 8.77614 9 8.5H8ZM2.64645 8.64645C2.45118 8.84171 2.45118 9.15829 2.64645 9.35355C2.84171 9.54882 3.15829 9.54882 3.35355 9.35355L2.64645 8.64645ZM3.5 4H8.5V3H3.5V4ZM8 3.5V8.5H9V3.5H8ZM8.14645 3.14645L2.64645 8.64645L3.35355 9.35355L8.85355 3.85355L8.14645 3.14645Z' fill='%23111'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: center;
+            opacity: 0.7;
+        }
+
+        .experience-location {
+            font-size: 13px;
+            color: var(--text-tertiary);
+            margin-bottom: 0.125rem;
+        }
+
+        .experience-description {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.4;
+        }
+
+        .item-year {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 0.25rem;
         }
 
         .item-title {
-            font-size: 18px;
-            font-weight: 700;
+            font-size: 16px;
+            font-weight: 600;
             color: var(--text-primary);
             margin-bottom: 0.25rem;
         }
@@ -251,7 +363,7 @@
             text-decoration: none;
             display: inline-flex;
             align-items: center;
-            gap: 0.5rem;
+            gap: 0.25rem;
         }
 
         .item-title-link:hover {
@@ -259,16 +371,20 @@
         }
 
         .item-title-link::after {
-            content: "→";
-            font-size: 14px;
+            content: "";
+            width: 12px;
+            height: 12px;
+            background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.5 3C3.22386 3 3 3.22386 3 3.5C3 3.77614 3.22386 4 3.5 4V3ZM8.5 3.5H9C9 3.22386 8.77614 3 8.5 3V3.5ZM8 8.5C8 8.77614 8.22386 9 8.5 9C8.77614 9 9 8.77614 9 8.5H8ZM2.64645 8.64645C2.45118 8.84171 2.45118 9.15829 2.64645 9.35355C2.84171 9.54882 3.15829 9.54882 3.35355 9.35355L2.64645 8.64645ZM3.5 4H8.5V3H3.5V4ZM8 3.5V8.5H9V3.5H8ZM8.14645 3.14645L2.64645 8.64645L3.35355 9.35355L8.85355 3.85355L8.14645 3.14645Z' fill='%23111'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: center;
             opacity: 0.7;
         }
 
         .item-description {
             font-size: 14px;
-            color: var(--text-primary);
+            color: var(--text-secondary);
             line-height: 1.5;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.25rem;
         }
 
         .item-subtitle {
@@ -308,6 +424,23 @@
             gap: 0.25rem;
         }
 
+        /* Skills */
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .skill-tag {
+            background-color: var(--bg-tertiary);
+            color: var(--text-secondary);
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 13px;
+            font-weight: 500;
+            border: 1px solid var(--border-secondary);
+        }
+
         /* Responsive design */
         @media (max-width: 768px) {
             .container {
@@ -326,6 +459,19 @@
                 font-size: 11px;
             }
 
+            .profile-header {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                gap: 1rem;
+            }
+
+            .profile-photo {
+                width: 72px;
+                height: 72px;
+                font-size: 2.5rem;
+            }
+
             .section {
                 flex-direction: column;
                 gap: 0.5rem;
@@ -336,11 +482,21 @@
                 font-size: 14px;
             }
 
+            .experience-item {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .experience-duration {
+                flex: none;
+                font-size: 12px;
+            }
+
             .item-title {
                 font-size: 16px;
             }
 
-            .item-description {
+            .item-description, .experience-description {
                 font-size: 13px;
             }
 
@@ -459,22 +615,39 @@
 
     <div class="container">
 
+        <!-- Profile Header -->
+        <section class="profile-header">
+            <div class="profile-photo">
+                {{ site.data.resume.personal.avatar }}
+            </div>
+            <div class="profile-info">
+                <h1>{{ site.data.resume.personal.name }}</h1>
+                <div class="profile-links">
+                    {% if site.data.resume.personal.cv_link %}
+                    <a href="https://{{ site.data.resume.personal.cv_link }}" class="profile-link" target="_blank" rel="noopener">{{ site.data.resume.personal.cv_link }}</a>
+                    {% endif %}
+                </div>
+            </div>
+        </section>
+
         <!-- Side Projects Section -->
         {% if site.data.resume.side_projects and site.data.resume.side_projects.size > 0 %}
         <section class="section">
             <div class="section-label">Side Projects</div>
             <div class="section-content">
                 {% for project in site.data.resume.side_projects %}
-                <div class="section-item">
-                    <div class="item-year">{{ project.year }}</div>
-                    <div class="item-title">
-                        {% if project.url %}
-                        <a href="{{ project.url }}" class="item-title-link" target="_blank" rel="noopener">{{ project.title }}</a>
-                        {% else %}
-                        {{ project.title }}
-                        {% endif %}
+                <div class="experience-item">
+                    <div class="experience-duration">{{ project.year }}</div>
+                    <div class="experience-content">
+                        <div class="experience-title">
+                            {% if project.url %}
+                            <a href="{{ project.url }}" class="experience-title-link" target="_blank" rel="noopener">{{ project.title }}</a>
+                            {% else %}
+                            {{ project.title }}
+                            {% endif %}
+                        </div>
+                        <div class="experience-description">{{ project.description }}</div>
                     </div>
-                    <div class="item-description">{{ project.description }}</div>
                 </div>
                 {% endfor %}
             </div>
@@ -543,21 +716,30 @@
         <section class="section">
             <div class="section-label">About</div>
             <div class="section-content">
-                <div class="item-description">{{ site.data.resume.personal.bio }}</div>
+                <div class="experience-description">{{ site.data.resume.personal.bio }}</div>
             </div>
         </section>
 
-        <!-- Work Experience Section -->
         <!-- Work Experience Section -->
         <section class="section">
             <div class="section-label">Work Experience</div>
             <div class="section-content">
                 {% for job in site.data.resume.experience %}
-                <div class="section-item">
-                    <div class="item-year">{{ job.period }}</div>
-                    <div class="item-title">{{ job.position }}</div>
-                    <div class="item-subtitle">{{ job.company }}</div>
-                    <div class="item-description">{{ job.description }}</div>
+                <div class="experience-item">
+                    <div class="experience-duration">{{ job.period }}</div>
+                    <div class="experience-content">
+                        <div class="experience-title">
+                            {% if job.company_url %}
+                            <a href="{{ job.company_url }}" class="experience-title-link" target="_blank" rel="noopener">{{ job.position }} at {{ job.company }}</a>
+                            {% else %}
+                            {{ job.position }} at {{ job.company }}
+                            {% endif %}
+                        </div>
+                        {% if job.location %}
+                        <div class="experience-location">{{ job.location }}</div>
+                        {% endif %}
+                        <div class="experience-description">{{ job.description }}</div>
+                    </div>
                 </div>
                 {% endfor %}
             </div>
@@ -588,17 +770,18 @@
             <div class="section-label">Speaking</div>
             <div class="section-content">
                 {% for talk in site.data.resume.speaking %}
-                <div class="section-item">
-                    <div class="item-year">{{ talk.year }}</div>
-                    <div class="item-title">
-                        {% if talk.url %}
-                        <a href="{{ talk.url }}" class="item-title-link" target="_blank" rel="noopener">{{ talk.title }}</a>
-                        {% else %}
-                        {{ talk.title }}
-                        {% endif %}
+                <div class="experience-item">
+                    <div class="experience-duration">{{ talk.year }}</div>
+                    <div class="experience-content">
+                        <div class="experience-title">
+                            {% if talk.url %}
+                            <a href="{{ talk.url }}" class="experience-title-link" target="_blank" rel="noopener">{{ talk.title }} at {{ talk.event }}</a>
+                            {% else %}
+                            {{ talk.title }} at {{ talk.event }}
+                            {% endif %}
+                        </div>
+                        <div class="experience-description">{{ talk.description }}</div>
                     </div>
-                    <div class="item-subtitle">{{ talk.event }}</div>
-                    <div class="item-description">{{ talk.description }}</div>
                 </div>
                 {% endfor %}
             </div>
@@ -611,17 +794,18 @@
             <div class="section-label">Features</div>
             <div class="section-content">
                 {% for feature in site.data.resume.features %}
-                <div class="section-item">
-                    <div class="item-year">{{ feature.year }}</div>
-                    <div class="item-title">
-                        {% if feature.url %}
-                        <a href="{{ feature.url }}" class="item-title-link" target="_blank" rel="noopener">{{ feature.title }}</a>
-                        {% else %}
-                        {{ feature.title }}
-                        {% endif %}
+                <div class="experience-item">
+                    <div class="experience-duration">{{ feature.year }}</div>
+                    <div class="experience-content">
+                        <div class="experience-title">
+                            {% if feature.url %}
+                            <a href="{{ feature.url }}" class="experience-title-link" target="_blank" rel="noopener">{{ feature.title }} on {{ feature.publication }}</a>
+                            {% else %}
+                            {{ feature.title }} on {{ feature.publication }}
+                            {% endif %}
+                        </div>
+                        <div class="experience-description">{{ feature.description }}</div>
                     </div>
-                    <div class="item-subtitle">{{ feature.publication }}</div>
-                    <div class="item-description">{{ feature.description }}</div>
                 </div>
                 {% endfor %}
             </div>
@@ -633,25 +817,42 @@
             <div class="section-label">Projects</div>
             <div class="section-content">
                 {% for project in site.data.resume.projects %}
-                <div class="section-item">
-                    <div class="item-year">{{ project.year }}</div>
-                    {% if project.image %}
-                    <img src="{{ project.image }}" alt="{{ project.name }}" class="project-image">
-                    {% endif %}
-                    <div class="item-title">{{ project.name }}</div>
-                    <div class="item-description">{{ project.description }}</div>
-                    {% if project.links %}
-                    <div class="project-links">
-                        {% for link in project.links %}
-                        <a href="{{ link.url }}" class="contact-link" target="_blank" rel="noopener">
-                            <span>{{ link.icon }}</span>
-                            {{ link.name }}
-                        </a>
-                        {% endfor %}
+                <div class="experience-item">
+                    <div class="experience-duration">{{ project.year }}</div>
+                    <div class="experience-content">
+                        <div class="experience-title">
+                            {% if project.url %}
+                            <a href="{{ project.url }}" class="experience-title-link" target="_blank" rel="noopener">{{ project.name }}</a>
+                            {% else %}
+                            {{ project.name }}
+                            {% endif %}
+                        </div>
+                        <div class="experience-description">{{ project.description }}</div>
+                        {% if project.links %}
+                        <div class="project-links">
+                            {% for link in project.links %}
+                            <a href="{{ link.url }}" class="contact-link" target="_blank" rel="noopener">
+                                <span>{{ link.icon }}</span>
+                                {{ link.name }}
+                            </a>
+                            {% endfor %}
+                        </div>
+                        {% endif %}
                     </div>
-                    {% endif %}
                 </div>
                 {% endfor %}
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="section">
+            <div class="section-label">Skills</div>
+            <div class="section-content">
+                <div class="skills-list">
+                    {% for skill in site.data.resume.skills %}
+                    <span class="skill-tag">{{ skill }}</span>
+                    {% endfor %}
+                </div>
             </div>
         </section>
 
