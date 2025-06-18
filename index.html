@@ -94,9 +94,73 @@
 
         /* Container and layout */
         .container {
-            max-width: 800px;
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 2rem 1rem;
+            padding: 6rem 2rem 2rem; /* Top padding for fixed header */
+        }
+
+        /* Fixed Header */
+        .fixed-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: var(--bg-primary);
+            border-bottom: 1px solid var(--border-primary);
+            padding: 10px 20px;
+            z-index: 100;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .header-avatar {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background-color: var(--bg-quaternary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            color: var(--text-muted);
+        }
+
+        .header-content {
+            text-align: right;
+        }
+
+        .header-name {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin: 0;
+        }
+
+        .header-cv-link {
+            font-size: 12px;
+            color: var(--text-tertiary);
+            margin: 0;
+        }
+
+        /* Two-column layout */
+        .section {
+            display: flex;
+            margin-bottom: 2rem;
+            gap: 2rem;
+        }
+
+        .section-label {
+            flex: 0 0 200px;
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--text-primary);
+            padding-top: 0.5rem;
+        }
+
+        .section-content {
+            flex: 1;
         }
 
         /* Typography */
@@ -136,202 +200,153 @@
             color: var(--accent-secondary);
         }
 
-        /* Header section */
-        .header {
-            text-align: center;
-            margin-bottom: 3rem;
-            padding-bottom: 2rem;
-            border-bottom: 1px solid var(--border-primary);
-        }
-
-        .avatar {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            margin: 0 auto 1rem;
-            background-color: var(--bg-quaternary);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3rem;
-            color: var(--text-muted);
-        }
-
-        .subtitle {
-            font-size: 1.25rem;
-            color: var(--text-tertiary);
-            margin-bottom: 1rem;
-        }
-
-        .bio {
-            max-width: 600px;
-            margin: 0 auto;
-            font-size: 1.1rem;
-            line-height: 1.7;
-        }
-
-        /* Contact links */
+        /* Contact links for contact section */
         .contact-links {
             display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            margin-top: 1.5rem;
-            flex-wrap: wrap;
+            flex-direction: column;
+            gap: 0.5rem;
         }
 
         .contact-link {
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            padding: 0.5rem 1rem;
-            border: 1px solid var(--border-secondary);
-            border-radius: 6px;
-            transition: all 0.2s ease;
-            font-size: 0.9rem;
+            font-size: 14px;
+            color: var(--text-primary);
+            text-decoration: none;
         }
 
         .contact-link:hover {
-            border-color: var(--accent-primary);
-            background-color: var(--bg-hover);
-            transform: translateY(-1px);
+            color: var(--accent-primary);
         }
 
-        /* Section cards */
-        .section {
-            margin-bottom: 2rem;
+        /* Section items */
+        .section-item {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--border-primary);
         }
 
-        .card {
-            background: var(--bg-secondary);
-            border: 1px solid var(--border-primary);
-            border-radius: 8px;
-            padding: 1.5rem;
-            margin-bottom: 1rem;
-            transition: all 0.2s ease;
+        .section-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
         }
 
-        .card:hover {
-            border-color: var(--border-secondary);
-            box-shadow: 0 2px 8px var(--shadow-light);
-            transform: translateY(-1px);
+        .item-year {
+            font-size: 14px;
+            color: var(--text-muted);
+            font-style: italic;
+            margin-bottom: 0.5rem;
         }
 
-        /* Experience and Education items */
-        .item-header {
-            display: flex;
-            align-items: flex-start;
-            gap: 1rem;
-            margin-bottom: 1rem;
+        .item-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.25rem;
         }
 
-        .item-logo {
-            width: 48px;
-            height: 48px;
-            border-radius: 6px;
+        .item-title-link {
+            color: var(--text-primary);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .item-title-link:hover {
+            color: var(--accent-primary);
+        }
+
+        .item-title-link::after {
+            content: "→";
+            font-size: 14px;
+            opacity: 0.7;
+        }
+
+        .item-description {
+            font-size: 14px;
+            color: var(--text-primary);
+            line-height: 1.5;
+            margin-bottom: 0.5rem;
+        }
+
+        .item-subtitle {
+            font-size: 14px;
+            color: var(--text-tertiary);
+            margin-bottom: 0.25rem;
+        }
+
+        /* Project images */
+        .project-image {
+            width: 200px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 4px;
+            border: 1px solid var(--border-secondary);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Teams section special styling */
+        .teams-icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
             background-color: var(--bg-tertiary);
             display: flex;
             align-items: center;
             justify-content: center;
-            flex-shrink: 0;
-            font-weight: 600;
-            color: var(--text-tertiary);
+            margin: 0 auto 0.5rem;
+            font-size: 1rem;
         }
 
-        .item-content {
-            flex: 1;
-        }
-
-        .item-title {
-            font-weight: 600;
-            margin-bottom: 0.25rem;
-        }
-
-        .item-subtitle {
-            color: var(--text-tertiary);
-            font-size: 0.9rem;
-            margin-bottom: 0.25rem;
-        }
-
-        .item-period {
-            color: var(--text-quaternary);
-            font-size: 0.85rem;
-        }
-
-        .item-description {
-            margin-top: 1rem;
-            color: var(--text-secondary);
-        }
-
-        /* Skills */
-        .skills-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-        }
-
-        .skill-tag {
-            display: inline-block;
-            padding: 0.4rem 0.8rem;
-            background-color: var(--bg-tertiary);
-            border-radius: 20px;
-            font-size: 0.85rem;
-            color: var(--text-tertiary);
-            border: 1px solid var(--border-tertiary);
-            transition: all 0.2s ease;
-        }
-
-        .skill-tag:hover {
-            background-color: var(--bg-quaternary);
-            transform: translateY(-1px);
-        }
-
-        /* Projects */
+        /* Project links */
         .project-links {
             margin-top: 0.5rem;
             display: flex;
-            gap: 1rem;
-        }
-
-        .project-link {
-            font-size: 0.9rem;
-            display: inline-flex;
-            align-items: center;
+            flex-direction: column;
             gap: 0.25rem;
         }
 
         /* Responsive design */
         @media (max-width: 768px) {
             .container {
-                padding: 1rem 0.75rem;
+                padding: 6rem 1rem 2rem;
             }
 
-            h1 {
-                font-size: 2rem;
+            .fixed-header {
+                padding: 8px 16px;
             }
 
-            h2 {
-                font-size: 1.25rem;
-                margin-top: 2rem;
+            .header-name {
+                font-size: 14px;
             }
 
-            .item-header {
+            .header-cv-link {
+                font-size: 11px;
+            }
+
+            .section {
                 flex-direction: column;
                 gap: 0.5rem;
             }
 
-            .item-logo {
-                align-self: flex-start;
+            .section-label {
+                flex: none;
+                font-size: 14px;
             }
 
-            .contact-links {
-                flex-direction: column;
-                align-items: center;
+            .item-title {
+                font-size: 16px;
             }
 
-            .contact-link {
+            .item-description {
+                font-size: 13px;
+            }
+
+            .project-image {
                 width: 100%;
-                max-width: 300px;
-                justify-content: center;
+                max-width: 200px;
             }
         }
 
@@ -357,7 +372,7 @@
         }
 
         /* Focus styles */
-        a:focus, .contact-link:focus, .skill-tag:focus, .theme-toggle:focus {
+        a:focus, .contact-link:focus, .theme-toggle:focus {
             outline: 2px solid var(--focus-color);
             outline-offset: 2px;
         }
@@ -366,7 +381,7 @@
         .theme-toggle {
             position: fixed;
             top: 1rem;
-            right: 1rem;
+            left: 1rem;
             background: var(--bg-secondary);
             border: 1px solid var(--border-secondary);
             border-radius: 8px;
@@ -374,7 +389,7 @@
             cursor: pointer;
             font-size: 1.2rem;
             transition: all 0.2s ease;
-            z-index: 100;
+            z-index: 101;
             display: flex;
             align-items: center;
             gap: 0.25rem;
@@ -416,7 +431,7 @@
         @media (max-width: 768px) {
             .theme-toggle {
                 top: 0.75rem;
-                right: 0.75rem;
+                left: 0.75rem;
                 padding: 0.4rem;
                 font-size: 1.1rem;
             }
@@ -431,144 +446,215 @@
         <div class="icon auto-icon">💻</div>
     </button>
 
-    <div class="container">
-        <!-- Header Section -->
-        <header class="header">
-            <div class="avatar">
-                {{ site.data.resume.personal.avatar }}
-            </div>
-            <h1>{{ site.data.resume.personal.name }}</h1>
-            <p class="subtitle">{{ site.data.resume.personal.title }}</p>
-            <div class="bio">
-                <p>{{ site.data.resume.personal.bio }}</p>
-            </div>
-            <nav class="contact-links">
-                {% if site.data.resume.contact.email %}
-                <a href="mailto:{{ site.data.resume.contact.email }}" class="contact-link">
-                    <span>📧</span>
-                    Email
-                </a>
-                {% endif %}
-                {% if site.data.resume.contact.linkedin %}
-                <a href="{{ site.data.resume.contact.linkedin }}" class="contact-link" target="_blank" rel="noopener">
-                    <span>🔗</span>
-                    LinkedIn
-                </a>
-                {% endif %}
-                {% if site.data.resume.contact.github %}
-                <a href="{{ site.data.resume.contact.github }}" class="contact-link" target="_blank" rel="noopener">
-                    <span>🐙</span>
-                    GitHub
-                </a>
-                {% endif %}
-                {% if site.data.resume.contact.twitter %}
-                <a href="{{ site.data.resume.contact.twitter }}" class="contact-link" target="_blank" rel="noopener">
-                    <span>🐦</span>
-                    Twitter
-                </a>
-                {% endif %}
-                {% if site.data.resume.contact.website %}
-                <a href="{{ site.data.resume.contact.website }}" class="contact-link" target="_blank" rel="noopener">
-                    <span>🌐</span>
-                    Website
-                </a>
-                {% endif %}
-            </nav>
-        </header>
+    <!-- Fixed Header -->
+    <header class="fixed-header">
+        <div class="header-content">
+            <div class="header-name">{{ site.data.resume.personal.name }}</div>
+            <div class="header-cv-link">{{ site.data.resume.personal.cv_link | default: "resume.cv" }}</div>
+        </div>
+        <div class="header-avatar">
+            {{ site.data.resume.personal.avatar }}
+        </div>
+    </header>
 
-        <!-- Experience Section -->
+    <div class="container">
+
+        <!-- Side Projects Section -->
+        {% if site.data.resume.side_projects and site.data.resume.side_projects.size > 0 %}
         <section class="section">
-            <h2>Experience</h2>
-            {% for job in site.data.resume.experience %}
-            <article class="card">
-                <div class="item-header">
-                    <div class="item-logo">{{ job.logo }}</div>
-                    <div class="item-content">
-                        <h3 class="item-title">{{ job.position }}</h3>
-                        <p class="item-subtitle">{{ job.company }}</p>
-                        <p class="item-period">{{ job.period }}</p>
+            <div class="section-label">Side Projects</div>
+            <div class="section-content">
+                {% for project in site.data.resume.side_projects %}
+                <div class="section-item">
+                    <div class="item-year">{{ project.year }}</div>
+                    <div class="item-title">
+                        {% if project.url %}
+                        <a href="{{ project.url }}" class="item-title-link" target="_blank" rel="noopener">{{ project.title }}</a>
+                        {% else %}
+                        {{ project.title }}
+                        {% endif %}
                     </div>
+                    <div class="item-description">{{ project.description }}</div>
                 </div>
-                <div class="item-description">
-                    <p>{{ job.description }}</p>
+                {% endfor %}
+            </div>
+        </section>
+        {% endif %}
+
+        <!-- Teams Section -->
+        {% if site.data.resume.teams and site.data.resume.teams.size > 0 %}
+        <section class="section">
+            <div class="section-label">Teams</div>
+            <div class="section-content">
+                {% for team in site.data.resume.teams %}
+                <div class="section-item">
+                    <div class="item-year">{{ team.period }}</div>
+                    {% if team.period == "Current" %}
+                    <div class="teams-icon">{{ team.icon }}</div>
+                    {% endif %}
+                    <div class="item-title">{{ team.name }}</div>
+                    <div class="item-description">{{ team.description }}</div>
                 </div>
-            </article>
-            {% endfor %}
+                {% endfor %}
+            </div>
+        </section>
+        {% endif %}
+
+        <!-- Contact Section -->
+        <section class="section">
+            <div class="section-label">Contact</div>
+            <div class="section-content">
+                <div class="contact-links">
+                    {% if site.data.resume.contact.email %}
+                    <a href="mailto:{{ site.data.resume.contact.email }}" class="contact-link">
+                        <span>📧</span>
+                        {{ site.data.resume.contact.email }}
+                    </a>
+                    {% endif %}
+                    {% if site.data.resume.contact.linkedin %}
+                    <a href="{{ site.data.resume.contact.linkedin }}" class="contact-link" target="_blank" rel="noopener">
+                        <span>🔗</span>
+                        LinkedIn
+                    </a>
+                    {% endif %}
+                    {% if site.data.resume.contact.github %}
+                    <a href="{{ site.data.resume.contact.github }}" class="contact-link" target="_blank" rel="noopener">
+                        <span>🐙</span>
+                        GitHub
+                    </a>
+                    {% endif %}
+                    {% if site.data.resume.contact.twitter %}
+                    <a href="{{ site.data.resume.contact.twitter }}" class="contact-link" target="_blank" rel="noopener">
+                        <span>🐦</span>
+                        Twitter
+                    </a>
+                    {% endif %}
+                    {% if site.data.resume.contact.website %}
+                    <a href="{{ site.data.resume.contact.website }}" class="contact-link" target="_blank" rel="noopener">
+                        <span>🌐</span>
+                        Website
+                    </a>
+                    {% endif %}
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="section">
+            <div class="section-label">About</div>
+            <div class="section-content">
+                <div class="item-description">{{ site.data.resume.personal.bio }}</div>
+            </div>
+        </section>
+
+        <!-- Work Experience Section -->
+        <!-- Work Experience Section -->
+        <section class="section">
+            <div class="section-label">Work Experience</div>
+            <div class="section-content">
+                {% for job in site.data.resume.experience %}
+                <div class="section-item">
+                    <div class="item-year">{{ job.period }}</div>
+                    <div class="item-title">{{ job.position }}</div>
+                    <div class="item-subtitle">{{ job.company }}</div>
+                    <div class="item-description">{{ job.description }}</div>
+                </div>
+                {% endfor %}
+            </div>
         </section>
 
         <!-- Education Section -->
         {% if site.data.resume.settings.show_education != false %}
         <section class="section">
-            <h2>Education</h2>
-            {% for edu in site.data.resume.education %}
-            <article class="card">
-                <div class="item-header">
-                    <div class="item-logo">{{ edu.logo }}</div>
-                    <div class="item-content">
-                        <h3 class="item-title">{{ edu.degree }}</h3>
-                        <p class="item-subtitle">{{ edu.institution }}</p>
-                        <p class="item-period">{{ edu.period }}</p>
+            <div class="section-label">Education</div>
+            <div class="section-content">
+                {% for edu in site.data.resume.education %}
+                <div class="section-item">
+                    <div class="item-year">{{ edu.period }}</div>
+                    <div class="item-title">{{ edu.degree }}</div>
+                    <div class="item-subtitle">{{ edu.institution }}</div>
+                    {% if edu.description %}
+                    <div class="item-description">{{ edu.description }}</div>
+                    {% endif %}
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+        {% endif %}
+
+        <!-- Speaking Section -->
+        {% if site.data.resume.speaking and site.data.resume.speaking.size > 0 %}
+        <section class="section">
+            <div class="section-label">Speaking</div>
+            <div class="section-content">
+                {% for talk in site.data.resume.speaking %}
+                <div class="section-item">
+                    <div class="item-year">{{ talk.year }}</div>
+                    <div class="item-title">
+                        {% if talk.url %}
+                        <a href="{{ talk.url }}" class="item-title-link" target="_blank" rel="noopener">{{ talk.title }}</a>
+                        {% else %}
+                        {{ talk.title }}
+                        {% endif %}
                     </div>
+                    <div class="item-subtitle">{{ talk.event }}</div>
+                    <div class="item-description">{{ talk.description }}</div>
                 </div>
-                {% if edu.description %}
-                <div class="item-description">
-                    <p>{{ edu.description }}</p>
+                {% endfor %}
+            </div>
+        </section>
+        {% endif %}
+
+        <!-- Features Section -->
+        {% if site.data.resume.features and site.data.resume.features.size > 0 %}
+        <section class="section">
+            <div class="section-label">Features</div>
+            <div class="section-content">
+                {% for feature in site.data.resume.features %}
+                <div class="section-item">
+                    <div class="item-year">{{ feature.year }}</div>
+                    <div class="item-title">
+                        {% if feature.url %}
+                        <a href="{{ feature.url }}" class="item-title-link" target="_blank" rel="noopener">{{ feature.title }}</a>
+                        {% else %}
+                        {{ feature.title }}
+                        {% endif %}
+                    </div>
+                    <div class="item-subtitle">{{ feature.publication }}</div>
+                    <div class="item-description">{{ feature.description }}</div>
                 </div>
-                {% endif %}
-            </article>
-            {% endfor %}
+                {% endfor %}
+            </div>
         </section>
         {% endif %}
 
         <!-- Projects Section -->
         <section class="section">
-            <h2>Projects</h2>
-            {% for project in site.data.resume.projects %}
-            <article class="card">
-                <h3 class="item-title">{{ project.name }}</h3>
-                <p class="item-description">{{ project.description }}</p>
-                {% if project.links %}
-                <div class="project-links">
-                    {% for link in project.links %}
-                    <a href="{{ link.url }}" class="project-link" target="_blank" rel="noopener">
-                        <span>{{ link.icon }}</span>
-                        {{ link.name }}
-                    </a>
-                    {% endfor %}
+            <div class="section-label">Projects</div>
+            <div class="section-content">
+                {% for project in site.data.resume.projects %}
+                <div class="section-item">
+                    <div class="item-year">{{ project.year }}</div>
+                    {% if project.image %}
+                    <img src="{{ project.image }}" alt="{{ project.name }}" class="project-image">
+                    {% endif %}
+                    <div class="item-title">{{ project.name }}</div>
+                    <div class="item-description">{{ project.description }}</div>
+                    {% if project.links %}
+                    <div class="project-links">
+                        {% for link in project.links %}
+                        <a href="{{ link.url }}" class="contact-link" target="_blank" rel="noopener">
+                            <span>{{ link.icon }}</span>
+                            {{ link.name }}
+                        </a>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
                 </div>
-                {% endif %}
-            </article>
-            {% endfor %}
-        </section>
-
-        <!-- Skills Section -->
-        <section class="section">
-            <h2>Skills</h2>
-            
-            <div class="card">
-                <div class="skills-grid">
-                    {% for skill in site.data.resume.skills %}
-                    <span class="skill-tag">{{ skill }}</span>
-                    {% endfor %}
-                </div>
+                {% endfor %}
             </div>
         </section>
 
-        <!-- Awards Section (Optional) -->
-        {% if site.data.resume.settings.show_awards != false and site.data.resume.awards %}
-        <section class="section">
-            <h2>Awards</h2>
-            {% for award in site.data.resume.awards %}
-            <article class="card">
-                <h3 class="item-title">{{ award.title }}</h3>
-                <p class="item-subtitle">{{ award.organization }} • {{ award.year }}</p>
-                {% if award.description %}
-                <p class="item-description">{{ award.description }}</p>
-                {% endif %}
-            </article>
-            {% endfor %}
-        </section>
-        {% endif %}
     </div>
 
     <script>
