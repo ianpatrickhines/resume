@@ -135,6 +135,13 @@ education:
 
 # Awards (Optional)
 awards:
+  # - title: "Award Name"
+  #   organization: "Organization"
+  #   year: "2024"
+  #   description: "Award description..."
+
+# Certifications (Optional)
+certifications:
   - title: "Certified NationBuilder Architect"
     organization: "NationBuilder"
     year: "2013"
