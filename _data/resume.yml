@@ -3,7 +3,7 @@ personal:
   name: "Ian Patrick Hines"
   title: "Hard work is hard, but it works. So work hard."
   bio: "Ian Patrick Hines is a seasoned professional with over 20 years of expertise in political consulting, government administration, front-end development, and software engineering. He has guided more than 100 clients, including national leaders across nearly a dozen countries, orchestrated the delivery of over one billion emails, and raised millions of dollars through online campaigns."
-  avatar: "assets/ian-avatar.svg"  # SVG placeholder - replace with actual image when available
+  avatar: "assets/ian-avatar.jpg"
   cv_link: "https://x.com/ianpatrickhines"  # For the CV link in header
 
 # Contact Information
@@ -13,7 +13,7 @@ contact:
   github: "https://github.com/ianpatrickhines"
   twitter: "https://x.com/ianpatrickhines"
   website: "https://www.hines.digital"  # Optional
-  phone: ""    # Optional
+  # phone: ""    # Optional - commented out when not provided
 
 # Side Projects (new section)
 side_projects:
@@ -51,7 +51,7 @@ experience:
     period: "2015 - Present"
     location: "Remote"  # Optional
     company_url: "https://www.hines.digital"  # Optional
-    description: "Hines Digital is my professional office, serving as both a consultancy and a holding company as I found and acquire profitable online businesses."
+    description: "Hines Digital is Ian's professional office, serving as both a consultancy and a holding company as he founds and acquire profitable online businesses."
   
   - company: "Conduit Street Services, LLC"
     # logo: "PS"
@@ -71,7 +71,7 @@ experience:
 
   - company: "Freelance"
     # logo: "PS"
-    position: "Certified NationBuilder Expert"
+    position: "Freelance"
     period: "2013 - 2015"
     location: "Remote"  # Optional
     description: "Provided NationBuilder consulting services to campaigns & causes."
@@ -87,7 +87,7 @@ education:
   - institution: "McDaniel College"
     logo: "🎓"
     degree: "Bachelor of Arts in Political Science"
-    period: "2016 - 2020"
+    period: "2004 - 2007"
     description: "Graduated in three years. Focused on political science with an emphasis on US constitutional law and state & local government."
 
 # Client Projects

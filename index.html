@@ -682,6 +682,27 @@
         </section>
         {% endif %}
 
+        <!-- Awards Section -->
+        {% if site.data.resume.awards and site.data.resume.awards.size > 0 and site.data.resume.settings.show_awards != false %}
+        <section class="section">
+            <div class="section-label">Awards</div>
+            <div class="section-content">
+                {% for award in site.data.resume.awards %}
+                <div class="experience-item">
+                    <div class="experience-duration">{{ award.year }}</div>
+                    <div class="experience-content">
+                        <div class="experience-title">{{ award.title }}</div>
+                        <div class="experience-location">{{ award.organization }}</div>
+                        {% if award.description %}
+                        <div class="experience-description">{{ award.description }}</div>
+                        {% endif %}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+        {% endif %}
+
 
 
         <!-- Contact Section -->
