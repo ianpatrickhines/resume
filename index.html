@@ -1,0 +1,428 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ site.data.resume.personal.name }} - {{ site.data.resume.personal.title }}</title>
+    <meta name="description" content="{{ site.data.resume.personal.bio | truncate: 160 }}">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="{{ site.data.resume.settings.theme_color | default: '#ffffff' }}">
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+            font-size: 16px;
+        }
+
+        /* Container and layout */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        /* Typography */
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            margin-top: 3rem;
+            letter-spacing: -0.01em;
+        }
+
+        h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: #555;
+        }
+
+        a {
+            color: #0066cc;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: #004499;
+        }
+
+        /* Header section */
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin: 0 auto 1rem;
+            background-color: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: #999;
+        }
+
+        .subtitle {
+            font-size: 1.25rem;
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .bio {
+            max-width: 600px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        /* Contact links */
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            transition: all 0.2s ease;
+            font-size: 0.9rem;
+        }
+
+        .contact-link:hover {
+            border-color: #0066cc;
+            background-color: #f8f9ff;
+            transform: translateY(-1px);
+        }
+
+        /* Section cards */
+        .section {
+            margin-bottom: 2rem;
+        }
+
+        .card {
+            background: #fff;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            transition: all 0.2s ease;
+        }
+
+        .card:hover {
+            border-color: #ddd;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            transform: translateY(-1px);
+        }
+
+        /* Experience and Education items */
+        .item-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .item-logo {
+            width: 48px;
+            height: 48px;
+            border-radius: 6px;
+            background-color: #f5f5f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-weight: 600;
+            color: #666;
+        }
+
+        .item-content {
+            flex: 1;
+        }
+
+        .item-title {
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .item-subtitle {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .item-period {
+            color: #888;
+            font-size: 0.85rem;
+        }
+
+        .item-description {
+            margin-top: 1rem;
+            color: #555;
+        }
+
+        /* Skills */
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .skill-tag {
+            display: inline-block;
+            padding: 0.4rem 0.8rem;
+            background-color: #f5f5f5;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: #666;
+            border: 1px solid #e0e0e0;
+            transition: all 0.2s ease;
+        }
+
+        .skill-tag:hover {
+            background-color: #e8e8e8;
+            transform: translateY(-1px);
+        }
+
+        /* Projects */
+        .project-links {
+            margin-top: 0.5rem;
+            display: flex;
+            gap: 1rem;
+        }
+
+        .project-link {
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem 0.75rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.25rem;
+                margin-top: 2rem;
+            }
+
+            .item-header {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .item-logo {
+                align-self: flex-start;
+            }
+
+            .contact-links {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .contact-link {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
+        }
+
+        /* Accessibility improvements */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        /* Focus styles */
+        a:focus, .contact-link:focus, .skill-tag:focus {
+            outline: 2px solid #0066cc;
+            outline-offset: 2px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <div class="avatar">
+                {{ site.data.resume.personal.avatar }}
+            </div>
+            <h1>{{ site.data.resume.personal.name }}</h1>
+            <p class="subtitle">{{ site.data.resume.personal.title }}</p>
+            <div class="bio">
+                <p>{{ site.data.resume.personal.bio }}</p>
+            </div>
+            <nav class="contact-links">
+                {% if site.data.resume.contact.email %}
+                <a href="mailto:{{ site.data.resume.contact.email }}" class="contact-link">
+                    <span>📧</span>
+                    Email
+                </a>
+                {% endif %}
+                {% if site.data.resume.contact.linkedin %}
+                <a href="{{ site.data.resume.contact.linkedin }}" class="contact-link" target="_blank" rel="noopener">
+                    <span>🔗</span>
+                    LinkedIn
+                </a>
+                {% endif %}
+                {% if site.data.resume.contact.github %}
+                <a href="{{ site.data.resume.contact.github }}" class="contact-link" target="_blank" rel="noopener">
+                    <span>🐙</span>
+                    GitHub
+                </a>
+                {% endif %}
+                {% if site.data.resume.contact.twitter %}
+                <a href="{{ site.data.resume.contact.twitter }}" class="contact-link" target="_blank" rel="noopener">
+                    <span>🐦</span>
+                    Twitter
+                </a>
+                {% endif %}
+                {% if site.data.resume.contact.website %}
+                <a href="{{ site.data.resume.contact.website }}" class="contact-link" target="_blank" rel="noopener">
+                    <span>🌐</span>
+                    Website
+                </a>
+                {% endif %}
+            </nav>
+        </header>
+
+        <!-- Experience Section -->
+        <section class="section">
+            <h2>Experience</h2>
+            {% for job in site.data.resume.experience %}
+            <article class="card">
+                <div class="item-header">
+                    <div class="item-logo">{{ job.logo }}</div>
+                    <div class="item-content">
+                        <h3 class="item-title">{{ job.position }}</h3>
+                        <p class="item-subtitle">{{ job.company }}</p>
+                        <p class="item-period">{{ job.period }}</p>
+                    </div>
+                </div>
+                <div class="item-description">
+                    <p>{{ job.description }}</p>
+                </div>
+            </article>
+            {% endfor %}
+        </section>
+
+        <!-- Education Section -->
+        {% if site.data.resume.settings.show_education != false %}
+        <section class="section">
+            <h2>Education</h2>
+            {% for edu in site.data.resume.education %}
+            <article class="card">
+                <div class="item-header">
+                    <div class="item-logo">{{ edu.logo }}</div>
+                    <div class="item-content">
+                        <h3 class="item-title">{{ edu.degree }}</h3>
+                        <p class="item-subtitle">{{ edu.institution }}</p>
+                        <p class="item-period">{{ edu.period }}</p>
+                    </div>
+                </div>
+                {% if edu.description %}
+                <div class="item-description">
+                    <p>{{ edu.description }}</p>
+                </div>
+                {% endif %}
+            </article>
+            {% endfor %}
+        </section>
+        {% endif %}
+
+        <!-- Projects Section -->
+        <section class="section">
+            <h2>Projects</h2>
+            {% for project in site.data.resume.projects %}
+            <article class="card">
+                <h3 class="item-title">{{ project.name }}</h3>
+                <p class="item-description">{{ project.description }}</p>
+                {% if project.links %}
+                <div class="project-links">
+                    {% for link in project.links %}
+                    <a href="{{ link.url }}" class="project-link" target="_blank" rel="noopener">
+                        <span>{{ link.icon }}</span>
+                        {{ link.name }}
+                    </a>
+                    {% endfor %}
+                </div>
+                {% endif %}
+            </article>
+            {% endfor %}
+        </section>
+
+        <!-- Skills Section -->
+        <section class="section">
+            <h2>Skills</h2>
+            
+            <div class="card">
+                <div class="skills-grid">
+                    {% for skill in site.data.resume.skills %}
+                    <span class="skill-tag">{{ skill }}</span>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+
+        <!-- Awards Section (Optional) -->
+        {% if site.data.resume.settings.show_awards != false and site.data.resume.awards %}
+        <section class="section">
+            <h2>Awards</h2>
+            {% for award in site.data.resume.awards %}
+            <article class="card">
+                <h3 class="item-title">{{ award.title }}</h3>
+                <p class="item-subtitle">{{ award.organization }} • {{ award.year }}</p>
+                {% if award.description %}
+                <p class="item-description">{{ award.description }}</p>
+                {% endif %}
+            </article>
+            {% endfor %}
+        </section>
+        {% endif %}
+    </div>
+</body>
+</html>
