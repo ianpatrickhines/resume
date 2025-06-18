@@ -120,6 +120,21 @@
             justify-content: center;
             font-size: 3rem;
             flex-shrink: 0;
+            overflow: hidden;
+        }
+
+        .profile-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+            user-select: none;
+            -webkit-user-drag: none;
+            -khtml-user-drag: none;
+            -moz-user-drag: none;
+            -o-user-drag: none;
+            user-drag: none;
+            draggable: false;
         }
 
         .profile-info {
@@ -489,7 +504,17 @@
         <!-- Profile Header -->
         <section class="profile-header">
             <div class="profile-photo">
-                {{ site.data.resume.personal.avatar }}
+                {% assign avatar = site.data.resume.personal.avatar %}
+                {% assign is_image = false %}
+                {% if avatar contains 'http' or avatar contains '.jpg' or avatar contains '.jpeg' or avatar contains '.png' or avatar contains '.gif' or avatar contains '.webp' or avatar contains '.svg' %}
+                    {% assign is_image = true %}
+                {% endif %}
+                
+                {% if is_image %}
+                    <img src="{{ avatar }}" alt="{{ site.data.resume.personal.name }}" draggable="false">
+                {% else %}
+                    {{ avatar }}
+                {% endif %}
             </div>
             <div class="profile-info">
                 <h1>{{ site.data.resume.personal.name }}</h1>

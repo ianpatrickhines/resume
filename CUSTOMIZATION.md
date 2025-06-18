@@ -19,8 +19,31 @@ personal:
   name: "Jane Smith"
   title: "Senior Product Designer"
   bio: "Passionate designer with 8+ years creating user-centered digital experiences. Led design teams at Fortune 500 companies, improving user satisfaction by 40%."
-  avatar: "👩‍💼"  # Can be emoji or image URL
+  avatar: "👩‍💼"  # Can be emoji, initials, or image URL
 ```
+
+### Avatar Options
+
+Your avatar can be:
+
+```yaml
+# Option 1: Emoji
+avatar: "👩‍💼"
+
+# Option 2: Initials  
+avatar: "JS"
+
+# Option 3: Image URL (external)
+avatar: "https://example.com/photo.jpg"
+
+# Option 4: Local image (place in repository)
+avatar: "assets/avatar.png"
+
+# Option 5: Simple filename
+avatar: "photo.jpg"
+```
+
+Image avatars will automatically display as round, non-draggable photos that fill the 92x92px avatar space. Supported formats: `.jpg`, `.jpeg`, `.png`, `.gif`, `.webp`, `.svg`
 
 ## Contact Information
 
