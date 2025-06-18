@@ -149,9 +149,8 @@
             display: flex;
             align-items: flex-start;
             gap: 1rem;
-            margin-bottom: 2rem;
-            padding-bottom: 1.5rem;
-            border-bottom: 1px solid var(--border-primary);
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
         }
 
         .profile-photo {
@@ -168,13 +167,14 @@
 
         .profile-info {
             flex: 1;
-            padding-top: 0.5rem;
+            padding-top: 0.25rem;
         }
 
         .profile-info h1 {
-            font-size: 1.5rem;
+            font-size: 1.375rem;
             font-weight: 600;
-            margin-bottom: 0.25rem;
+            margin-bottom: 0.125rem;
+            line-height: 1.3;
         }
 
         .profile-links {
@@ -195,13 +195,13 @@
         /* Two-column layout */
         .section {
             display: flex;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.25rem;
             gap: 1.5rem;
         }
 
         .section-label {
             flex: 0 0 140px;
-            font-size: 14px;
+            font-size: 13px;
             font-weight: 600;
             color: var(--text-primary);
             padding-top: 0.25rem;
@@ -284,13 +284,11 @@
         .experience-item {
             display: flex;
             gap: 1.5rem;
-            margin-bottom: 1rem;
-            padding-bottom: 0.75rem;
-            border-bottom: 1px solid var(--border-primary);
+            margin-bottom: 0.75rem;
+            padding-bottom: 0.5rem;
         }
 
         .experience-item:last-child {
-            border-bottom: none;
             margin-bottom: 0;
         }
 
@@ -298,7 +296,7 @@
             flex: 0 0 120px;
             font-size: 13px;
             color: var(--text-muted);
-            padding-top: 0.25rem;
+            padding-top: 0.125rem;
         }
 
         .experience-content {
@@ -306,10 +304,11 @@
         }
 
         .experience-title {
-            font-size: 16px;
+            font-size: 15px;
             font-weight: 600;
             color: var(--text-primary);
-            margin-bottom: 0.25rem;
+            margin-bottom: 0.125rem;
+            line-height: 1.4;
         }
 
         .experience-title-link {
@@ -337,13 +336,13 @@
         .experience-location {
             font-size: 13px;
             color: var(--text-tertiary);
-            margin-bottom: 0.25rem;
+            margin-bottom: 0.125rem;
         }
 
         .experience-description {
             font-size: 14px;
             color: var(--text-secondary);
-            line-height: 1.5;
+            line-height: 1.4;
         }
 
         .item-year {
@@ -423,6 +422,23 @@
             display: flex;
             flex-direction: column;
             gap: 0.25rem;
+        }
+
+        /* Skills */
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .skill-tag {
+            background-color: var(--bg-tertiary);
+            color: var(--text-secondary);
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 13px;
+            font-weight: 500;
+            border: 1px solid var(--border-secondary);
         }
 
         /* Responsive design */
@@ -700,7 +716,7 @@
         <section class="section">
             <div class="section-label">About</div>
             <div class="section-content">
-                <div class="item-description">{{ site.data.resume.personal.bio }}</div>
+                <div class="experience-description">{{ site.data.resume.personal.bio }}</div>
             </div>
         </section>
 
@@ -825,6 +841,18 @@
                     </div>
                 </div>
                 {% endfor %}
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="section">
+            <div class="section-label">Skills</div>
+            <div class="section-content">
+                <div class="skills-list">
+                    {% for skill in site.data.resume.skills %}
+                    <span class="skill-tag">{{ skill }}</span>
+                    {% endfor %}
+                </div>
             </div>
         </section>
 
