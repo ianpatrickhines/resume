@@ -27,6 +27,7 @@ A clean, fast-loading resume/profile template inspired by read.cv, designed for 
 - **Speaking**: Conference talks and presentations (optional)
 - **Features**: Media mentions and publications (optional)
 - **Skills**: Technology and skill tags (optional)
+- **Certifications**: Professional certifications and credentials (optional)
 - **Awards**: Optional achievements section
 
 ## Quick Start
@@ -132,6 +133,13 @@ skills:
   - "Skill 1"
   - "Skill 2"
   - "Skill 3"
+
+# Certifications (Optional)
+certifications:
+  - title: "Certification Name"
+    organization: "Organization"
+    year: "2024"
+    description: "Certification description..."
 
 # Awards (Optional - controlled by settings.show_awards)
 awards:
@@ -273,6 +281,20 @@ skills:
   - "JavaScript"
   - "React"
   # Add your skills here
+```
+
+### Adding Certifications
+
+```yaml
+certifications:
+  - title: "Certified Kubernetes Administrator"
+    organization: "Cloud Native Computing Foundation"
+    year: "2024"
+    description: "Demonstrates expertise in managing Kubernetes clusters."
+  - title: "AWS Solutions Architect"
+    organization: "Amazon Web Services"
+    year: "2023"
+    description: "Professional-level certification for designing AWS solutions."
 ```
 
 ## Styling Customization

@@ -716,6 +716,27 @@
         </section>
         {% endif %}
 
+        <!-- Certifications Section -->
+        {% if site.data.resume.certifications and site.data.resume.certifications.size > 0 %}
+        <section class="section">
+            <div class="section-label">Certifications</div>
+            <div class="section-content">
+                {% for certification in site.data.resume.certifications %}
+                <div class="experience-item">
+                    <div class="experience-duration">{{ certification.year }}</div>
+                    <div class="experience-content">
+                        <div class="experience-title">{{ certification.title }}</div>
+                        <div class="experience-location">{{ certification.organization }}</div>
+                        {% if certification.description %}
+                        <div class="experience-description">{{ certification.description }}</div>
+                        {% endif %}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+        {% endif %}
+
 
 
         <!-- Contact Section -->
