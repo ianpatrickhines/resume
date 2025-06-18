@@ -4,6 +4,7 @@ personal:
   title: "Sample Professional Title"
   bio: "This is sample data for demonstration purposes. Replace this with your own professional bio that captures your essence, highlights your unique value, and showcases what makes you stand out in your field."
   avatar: "👤"
+  cv_link: "sample.cv"  # For the CV link in header
 
 # Contact Information
 contact:
@@ -13,6 +14,41 @@ contact:
   twitter: "https://twitter.com/sample-username"
   website: ""  # Optional
   phone: ""    # Optional
+
+# Side Projects (new section)
+side_projects:
+  - title: "Sample Side Project"
+    year: "2024"
+    description: "A creative side project showcasing innovation and personal interests."
+    url: "https://example.com/project"
+    
+  - title: "Another Side Project" 
+    year: "2023"
+    description: "Another example of personal work and exploration."
+    url: "https://example.com/project2"
+
+# Teams (new section)
+teams:
+  - name: "Current Team"
+    description: "Brief description of current team involvement"
+    icon: "👥"  # Circular icon
+    period: "Current"
+    
+# Speaking (new section)  
+speaking:
+  - title: "Sample Conference Talk"
+    event: "Tech Conference 2024"
+    year: "2024"
+    description: "Spoke about innovative approaches to software development."
+    url: "https://example.com/talk"
+    
+# Features (new section)
+features:
+  - title: "Sample Feature Highlight"
+    publication: "Tech Magazine"
+    year: "2024"
+    description: "Featured article about industry trends and innovations."
+    url: "https://example.com/article"
 
 # Experience
 experience:
@@ -39,7 +75,9 @@ education:
 # Projects
 projects:
   - name: "Sample Project One"
+    year: "2024"
     description: "Sample project entry. A brief description of your project, what technologies you used, and what problems it solves. Keep it concise but informative."
+    image: "https://via.placeholder.com/200x100/cccccc/666666?text=Project+1"  # 200x100px image
     links:
       - name: "Live Demo"
         url: "#"
@@ -49,7 +87,9 @@ projects:
         icon: "🐙"
   
   - name: "Sample Project Two"
+    year: "2023"
     description: "Another sample project entry showcasing different skills and technologies. Highlight the impact and results achieved."
+    image: "https://via.placeholder.com/200x100/cccccc/666666?text=Project+2"  # 200x100px image
     links:
       - name: "Live Demo"
         url: "#"
