@@ -1,134 +1,153 @@
 # Personal Information
 personal:
-  name: "Sample User"
-  title: "Sample Professional Title"
+  name: "Ian Patrick Hines"
+  title: "Hard work is hard, but it works. So work hard."
   bio: "This is sample data for demonstration purposes. Replace this with your own professional bio that captures your essence, highlights your unique value, and showcases what makes you stand out in your field."
-  avatar: "👤"
-  cv_link: "sample.cv"  # For the CV link in header
+  avatar: "assets/ian-avatar.svg"  # SVG placeholder - replace with actual image when available
+  cv_link: "https://x.com/ianpatrickhines"  # For the CV link in header
 
 # Contact Information
 contact:
-  email: "sample.email@example.com"
-  linkedin: "https://linkedin.com/in/sample-profile"
-  github: "https://github.com/sample-username"
-  twitter: "https://twitter.com/sample-username"
-  website: ""  # Optional
+  email: "ian@hines.digital"
+  linkedin: "https://linkedin.com/in/ianpatrickhines"
+  github: "https://github.com/ianpatrickhines"
+  twitter: "https://x.com/ianpatrickhines"
+  website: "https://www.hines.digital"  # Optional
   phone: ""    # Optional
 
 # Side Projects (new section)
 side_projects:
-  - title: "Sample Side Project"
-    year: "2024"
-    description: "A creative side project showcasing innovation and personal interests."
-    url: "https://example.com/project"
+  - title: "Simple Resume Template"
+    year: "2025"
+    description: "A simple resume template for GitHub Pages (you're looking at it right now)."
+    url: "https://github.com/ianpatrickhines/resume"
     
-  - title: "Another Side Project" 
-    year: "2023"
-    description: "Another example of personal work and exploration."
-    url: "https://example.com/project2"
-
-# Teams (new section)
-teams:
-  - name: "Current Team"
-    description: "Brief description of current team involvement"
-    icon: "👥"  # Circular icon
-    period: "Current"
+  # - title: "Another Side Project" 
+  #   year: "2023"
+  #   description: "Another example of personal work and exploration."
+  #   url: "https://example.com/project2"
     
 # Speaking (new section)  
-speaking:
-  - title: "Sample Conference Talk"
-    event: "Tech Conference 2024"
-    year: "2024"
-    description: "Spoke about innovative approaches to software development."
-    url: "https://example.com/talk"
+# speaking:
+#   - title: "Sample Conference Talk"
+#     event: "Tech Conference 2024"
+#     year: "2024"
+#     description: "Spoke about innovative approaches to software development."
+#     url: "https://example.com/talk"
     
 # Features (new section)
-features:
-  - title: "Sample Feature Highlight"
-    publication: "Tech Magazine"
-    year: "2024"
-    description: "Featured article about industry trends and innovations."
-    url: "https://example.com/article"
+# features:
+#   - title: "Sample Feature Highlight"
+#     publication: "Tech Magazine"
+#     year: "2024"
+#     description: "Featured article about industry trends and innovations."
+#     url: "https://example.com/article"
 
 # Experience
 experience:
-  - company: "Sample Company Inc."
-    logo: "SC"  # Can be emoji, initials, or image URL
-    position: "Senior Software Engineer"
-    period: "Jan 2022 - Present"
-    location: "New York, NY"  # Optional
-    company_url: "https://samplecompany.com"  # Optional
-    description: "Sample experience entry. Led development of key features that improved user engagement by 40%. Mentored junior developers and established best practices for code quality and testing."
-  
-  - company: "Previous Sample Corp"
-    logo: "PS"
-    position: "Software Engineer"
-    period: "Jun 2020 - Dec 2021"
+  - company: "Hines Digital"
+    # logo: "SC"  # Can be emoji, initials, or image URL
+    position: "Principal"
+    period: "2015 - Present"
     location: "Remote"  # Optional
-    company_url: "https://previouscorp.com"  # Optional
-    description: "Sample experience entry. Built scalable web applications using modern technologies. Collaborated with cross-functional teams to deliver high-quality products on time."
+    company_url: "https://www.hines.digital"  # Optional
+    description: "Hines Digital is my professional office, serving as both a consultancy and a holding company as I found and acquire profitable online businesses."
+  
+  - company: "Conduit Street Services, LLC"
+    # logo: "PS"
+    position: "Founder & CEO"
+    period: "2024 - Present"
+    location: "Remote"  # Optional
+    company_url: "https://conduitstreetservices.com"  # Optional
+    description: "Conduit Street Services, LLC supports political committees with email & text messaging fundraising services. Since 2024, we've raised more than $2.5 million online."
+
+  - company: "MD5 Data, LLC"
+    # logo: "PS"
+    position: "Founder & CEO"
+    period: "2024 - Present"
+    location: "Remote"  # Optional
+    company_url: "https://md5data.com"  # Optional
+    description: "MD5 Data, LLC provides compliant political data services."
+
+  - company: "Freelance"
+    # logo: "PS"
+    position: "Certified NationBuilder Expert"
+    period: "2013 - 2015"
+    location: "Remote"  # Optional
+    description: "Provided NationBuilder consulting services to campaigns & causes."
 
 # Education
 education:
-  - institution: "Sample University"
+  - institution: "University of Baltimore"
     logo: "🎓"
-    degree: "Bachelor of Science in Computer Science"
+    degree: "Master of Public Administration"
+    period: "2010"
+    description: "Focused on budgeting, statistics, and government & non-profit management."
+
+  - institution: "McDaniel College"
+    logo: "🎓"
+    degree: "Bachelor of Arts in Political Science"
     period: "2016 - 2020"
-    description: "Sample education entry. Graduated magna cum laude. Focused on software engineering, algorithms, and data structures."
+    description: "Graduated in three years. Focused on political science with an emphasis on US constitutional law and state & local government."
 
-# Projects
-projects:
-  - name: "Sample Project One"
-    year: "2024"
-    description: "Sample project entry. A brief description of your project, what technologies you used, and what problems it solves. Keep it concise but informative."
-    url: "https://sampleproject1.com"  # Optional main project URL
-    image: "https://via.placeholder.com/200x100/cccccc/666666?text=Project+1"  # 200x100px image
-    links:
-      - name: "Live Demo"
-        url: "#"
-        icon: "🔗"
-      - name: "GitHub"
-        url: "#"
-        icon: "🐙"
-  
-  - name: "Sample Project Two"
-    year: "2023"
-    description: "Another sample project entry showcasing different skills and technologies. Highlight the impact and results achieved."
-    url: "https://sampleproject2.com"  # Optional main project URL
-    image: "https://via.placeholder.com/200x100/cccccc/666666?text=Project+2"  # 200x100px image
-    links:
-      - name: "Live Demo"
-        url: "#"
-        icon: "🔗"
-      - name: "GitHub"
-        url: "#"
-        icon: "🐙"
+# Client Projects
+# client_projects:
+#   - name: "Sample Project One"
+#     year: "2024"
+#     description: "Sample project entry. A brief description of your project, what technologies you used, and what problems it solves. Keep it concise but informative."
+#     url: "https://sampleproject1.com"  # Optional main project URL
+#     image: "https://via.placeholder.com/200x100/cccccc/666666?text=Project+1"  # 200x100px image
+#     links:
+#       - name: "Live Demo"
+#         url: "#"
+#         icon: "🔗"
+#       - name: "GitHub"
+#         url: "#"
+#         icon: "🐙"
+#  
+#   - name: "Sample Project Two"
+#     year: "2023"
+#     description: "Another sample project entry showcasing different skills and technologies. Highlight the impact and results achieved."
+#     url: "https://sampleproject2.com"  # Optional main project URL
+#     image: "https://via.placeholder.com/200x100/cccccc/666666?text=Project+2"  # 200x100px image
+#     links:
+#       - name: "Live Demo"
+#         url: "#"
+#         icon: "🔗"
+#       - name: "GitHub"
+#         url: "#"
+#         icon: "🐙"
 
-# Skills
-skills:
-  - "JavaScript"
-  - "TypeScript"
-  - "React"
-  - "Node.js"
-  - "Python"
-  - "SQL"
-  - "Git"
-  - "AWS"
-  - "Docker"
-  - "CSS"
-  - "HTML"
-  - "REST APIs"
+# Skills (removed as not in provided data)
+# skills:
+#   - "JavaScript"
+#   - "TypeScript"
+#   - "React"
+#   - "Node.js"
+#   - "Python"
+#   - "SQL"
+#   - "Git"
+#   - "AWS"
+#   - "Docker"
+#   - "CSS"
+#   - "HTML"
+#   - "REST APIs"
 
 # Awards (Optional)
 awards:
-  - title: "Sample Outstanding Performance Award"
-    organization: "Sample Company Inc."
-    year: "2023"
-    description: "Sample award entry. Recognized for exceptional contributions to the team and delivering high-impact projects."
+  - title: "Certified NationBuilder Architect"
+    organization: "NationBuilder"
+    year: "2013"
+    description: "Certified to build custom websites and themes for multiple NationBuilder customers."
+
+  - title: "Certified NationBuilder Expert"
+    organization: "NationBuilder"
+    year: "2013"
+    description: "Certified to support customers' day to day use of NationBuilder."
 
 # Site Settings
 settings:
   show_awards: true      # Set to false to hide awards section
   show_education: true   # Set to false to hide education section
-  theme_color: "#0066cc" # Main accent color for light theme
-  dark_theme_color: "#5aa3ff" # Main accent color for dark theme (optional, defaults to lighter version)
+  theme_color: "#1d9bf0" # Main accent color for light theme
+  dark_theme_color: "#1d9bf0" # Main accent color for dark theme (optional, defaults to lighter version)
