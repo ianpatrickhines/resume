@@ -372,7 +372,7 @@
         }
 
         /* Focus styles */
-        a:focus, .contact-link:focus, .skill-tag:focus, .theme-toggle:focus {
+        a:focus, .contact-link:focus, .theme-toggle:focus {
             outline: 2px solid var(--focus-color);
             outline-offset: 2px;
         }
@@ -381,7 +381,7 @@
         .theme-toggle {
             position: fixed;
             top: 1rem;
-            right: 1rem;
+            left: 1rem;
             background: var(--bg-secondary);
             border: 1px solid var(--border-secondary);
             border-radius: 8px;
@@ -389,7 +389,7 @@
             cursor: pointer;
             font-size: 1.2rem;
             transition: all 0.2s ease;
-            z-index: 100;
+            z-index: 101;
             display: flex;
             align-items: center;
             gap: 0.25rem;
@@ -431,7 +431,7 @@
         @media (max-width: 768px) {
             .theme-toggle {
                 top: 0.75rem;
-                right: 0.75rem;
+                left: 0.75rem;
                 padding: 0.4rem;
                 font-size: 1.1rem;
             }
@@ -460,6 +460,7 @@
     <div class="container">
 
         <!-- Side Projects Section -->
+        {% if site.data.resume.side_projects and site.data.resume.side_projects.size > 0 %}
         <section class="section">
             <div class="section-label">Side Projects</div>
             <div class="section-content">
@@ -478,8 +479,10 @@
                 {% endfor %}
             </div>
         </section>
+        {% endif %}
 
         <!-- Teams Section -->
+        {% if site.data.resume.teams and site.data.resume.teams.size > 0 %}
         <section class="section">
             <div class="section-label">Teams</div>
             <div class="section-content">
@@ -495,6 +498,7 @@
                 {% endfor %}
             </div>
         </section>
+        {% endif %}
 
         <!-- Contact Section -->
         <section class="section">
@@ -579,6 +583,7 @@
         {% endif %}
 
         <!-- Speaking Section -->
+        {% if site.data.resume.speaking and site.data.resume.speaking.size > 0 %}
         <section class="section">
             <div class="section-label">Speaking</div>
             <div class="section-content">
@@ -598,8 +603,10 @@
                 {% endfor %}
             </div>
         </section>
+        {% endif %}
 
         <!-- Features Section -->
+        {% if site.data.resume.features and site.data.resume.features.size > 0 %}
         <section class="section">
             <div class="section-label">Features</div>
             <div class="section-content">
@@ -619,6 +626,7 @@
                 {% endfor %}
             </div>
         </section>
+        {% endif %}
 
         <!-- Projects Section -->
         <section class="section">
