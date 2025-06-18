@@ -29,7 +29,7 @@ A clean, fast-loading resume/profile template inspired by read.cv, designed for 
    - Fork this repository
    - Go to Settings → Pages
    - Select "Deploy from a branch" → main branch
-   - Your site will be available at `https://yourusername.github.io/hines.digital`
+   - Your site will be available at `https://yourusername.github.io/resume`
 
 2. **Customize Your Content**:
    - Edit `_data/resume.yml` to update all your information
