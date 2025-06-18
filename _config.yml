@@ -1,18 +1,13 @@
 # Jekyll configuration for GitHub Pages
-title: "Professional Resume"
-description: "A clean, fast-loading resume template"
-url: ""
-baseurl: ""
+title: "Sample Resume Template"
+description: "A clean, fast-loading resume template with sample data"
+url: "https://ianpatrickhines.github.io"
+baseurl: "/resume"
 
 # Build settings
 markdown: kramdown
 highlighter: rouge
 permalink: pretty
-
-# Collections
-collections:
-  data:
-    output: false
 
 # Exclude files from processing
 exclude:
