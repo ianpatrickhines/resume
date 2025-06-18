@@ -50,8 +50,7 @@ experience:
     position: "Principal"
     period: "2015 - Present"
     location: "Remote"  # Optional
-    company_url: "https://www.hines.digital"  # Optional
-    description: "Hines Digital is Ian's professional office, serving as both a consultancy and a holding company as he founds and acquire profitable online businesses."
+    description: "Hines Digital is Ian's personal office and holding company where he founds and acquires profitable online businesses."
   
   - company: "Conduit Street Services, LLC"
     # logo: "PS"
