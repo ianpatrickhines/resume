@@ -19,11 +19,14 @@ A clean, fast-loading resume/profile template inspired by read.cv, designed for 
 
 ## Sections Included
 
-- **Header**: Name, title, bio, and contact links
-- **Experience**: Work history with company logos and descriptions
+- **Header**: Name, title, bio, contact links, and optional CV link
+- **Experience**: Work history with company logos, descriptions, location, and company URLs
 - **Education**: Academic background (optional)
-- **Projects**: Portfolio projects with links
-- **Skills**: Technology and skill tags
+- **Side Projects**: Personal projects and explorations with links
+- **Client Projects**: Professional portfolio projects with images and links (optional)
+- **Speaking**: Conference talks and presentations (optional)
+- **Features**: Media mentions and publications (optional)
+- **Skills**: Technology and skill tags (optional)
 - **Awards**: Optional achievements section
 
 ## Quick Start
@@ -49,6 +52,102 @@ All content is managed through the `_data/resume.yml` file. This approach:
 - ✅ **Maintainable**: Clean separation of content and presentation
 - ✅ **Version-controlled**: Easy to track content changes
 
+### Complete YAML Schema
+
+Here's the complete structure of the `_data/resume.yml` file:
+
+```yaml
+# Personal Information (Required)
+personal:
+  name: "Your Name"
+  title: "Your Title/Role"
+  bio: "Your bio description..."
+  avatar: "👤"  # Emoji, initials, image URL, or local file
+  cv_link: "https://example.com/cv"  # Optional
+
+# Contact Information (Required)
+contact:
+  email: "your@email.com"
+  linkedin: "https://linkedin.com/in/username"
+  github: "https://github.com/username"
+  twitter: "https://twitter.com/username"  # Optional
+  website: "https://yoursite.com"  # Optional
+  phone: "+1 (555) 123-4567"  # Optional
+
+# Work Experience (Required)
+experience:
+  - company: "Company Name"
+    logo: "CO"  # Emoji, initials, or image URL
+    position: "Your Position"
+    period: "2020 - Present"
+    location: "City, State"  # Optional
+    company_url: "https://company.com"  # Optional
+    description: "Description of your role..."
+
+# Education (Optional - controlled by settings.show_education)
+education:
+  - institution: "University Name"
+    logo: "🎓"
+    degree: "Degree Name"
+    period: "2018 - 2020"
+    description: "Optional description..."
+
+# Side Projects (Optional)
+side_projects:
+  - title: "Project Title"
+    year: "2024"
+    description: "Project description..."
+    url: "https://project.com"
+
+# Client Projects (Optional)
+client_projects:
+  - name: "Project Name"
+    year: "2024"
+    description: "Project description..."
+    url: "https://project.com"  # Optional
+    image: "https://example.com/image.jpg"  # 200x100px
+    links:
+      - name: "Demo"
+        url: "https://demo.com"
+        icon: "🔗"
+
+# Speaking (Optional)
+speaking:
+  - title: "Talk Title"
+    event: "Conference Name"
+    year: "2024"
+    description: "Talk description..."
+    url: "https://talk.com"
+
+# Features (Optional)
+features:
+  - title: "Article Title"
+    publication: "Publication Name"
+    year: "2024"
+    description: "Feature description..."
+    url: "https://article.com"
+
+# Skills (Optional)
+skills:
+  - "Skill 1"
+  - "Skill 2"
+  - "Skill 3"
+
+# Awards (Optional - controlled by settings.show_awards)
+awards:
+  - title: "Award Name"
+    organization: "Organization"
+    year: "2024"
+    description: "Award description..."
+
+# Settings (Required)
+settings:
+  show_awards: true  # Show/hide awards section
+  show_education: true  # Show/hide education section
+  theme_color: "#0066cc"  # Light theme color
+  dark_theme_color: "#5aa3ff"  # Dark theme color (optional)
+```
+
 ### Editing Your Resume
 
 Simply edit the `_data/resume.yml` file with your information:
@@ -60,13 +159,16 @@ personal:
   title: "Senior Product Designer"
   bio: "Passionate designer with 8+ years creating user-centered digital experiences..."
   avatar: "👩‍💼"  # Emoji, initials, or image URL
+  cv_link: "https://example.com/cv"  # Optional CV/portfolio link
 
 # Contact Information  
 contact:
   email: "jane.smith@example.com"
   linkedin: "https://linkedin.com/in/janesmith"
   github: "https://github.com/janesmith"
-  # Add more as needed
+  twitter: "https://twitter.com/janesmith"  # Optional
+  website: "https://janesmith.design"  # Optional
+  # phone: "+1 (555) 123-4567"  # Optional
 ```
 
 ### Photo Avatars
@@ -87,8 +189,12 @@ Edit `_data/resume.yml` to show/hide sections:
 
 ```yaml
 settings:
-  show_awards: false     # Hide awards section
-  show_education: true   # Show education section
+  show_awards: true        # Show/hide awards section
+  show_education: true     # Show/hide education section
+  # All other sections (side_projects, client_projects, speaking, 
+  # features, skills) are shown if they exist in the YAML file
+  theme_color: "#0066cc"   # Light theme accent color
+  dark_theme_color: "#5aa3ff"  # Dark theme accent color (optional)
 ```
 
 ### Adding Experience
@@ -99,15 +205,30 @@ experience:
     logo: "GO"  # Can use emoji, initials, or image URL
     position: "Senior UX Designer"
     period: "2022 - Present"
+    location: "San Francisco, CA"  # Optional
+    company_url: "https://google.com"  # Optional
     description: "Lead design for mobile apps serving 50M+ users..."
 ```
 
-### Adding Projects
+### Adding Side Projects
 
 ```yaml
-projects:
+side_projects:
+  - title: "Simple Resume Template"
+    year: "2025"
+    description: "A simple resume template for GitHub Pages."
+    url: "https://github.com/username/resume"
+```
+
+### Adding Client Projects
+
+```yaml
+client_projects:
   - name: "Mobile App Redesign"
+    year: "2024"
     description: "Complete redesign improving conversion by 40%..."
+    url: "https://portfolio.com/project"  # Optional main project URL
+    image: "https://via.placeholder.com/200x100"  # 200x100px image
     links:
       - name: "Case Study"
         url: "https://portfolio.com/project"
@@ -117,7 +238,31 @@ projects:
         icon: "📱"
 ```
 
-### Updating Skills
+### Adding Speaking Engagements
+
+```yaml
+speaking:
+  - title: "Conference Talk Title"
+    event: "Tech Conference 2024"
+    year: "2024"
+    description: "Spoke about innovative approaches to software development."
+    url: "https://example.com/talk"
+```
+
+### Adding Media Features
+
+```yaml
+features:
+  - title: "Feature Article Title"
+    publication: "Tech Magazine"
+    year: "2024"
+    description: "Featured article about industry trends and innovations."
+    url: "https://example.com/article"
+```
+
+### Adding Skills (Optional)
+
+The skills section is optional and commented out by default. To enable it, uncomment and customize:
 
 ```yaml
 skills:
@@ -125,6 +270,8 @@ skills:
   - "Sketch"
   - "User Research"
   - "Prototyping"
+  - "JavaScript"
+  - "React"
   # Add your skills here
 ```
 
