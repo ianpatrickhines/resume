@@ -52,6 +52,14 @@ experience:
     location: "Remote"  # Optional
     description: "Hines Digital is Ian's personal office and holding company where he founds and acquires profitable online businesses."
   
+  - company: "DoNotContact.net"
+    # logo: "DNC"
+    position: "Founder & Lead Developer"
+    period: "2025 - Present"
+    location: "Remote"  # Optional
+    company_url: "https://donotcontact.net"  # Optional
+    description: "DoNotContact.net helps Americans legally opt out of unwanted political communications and helps campaigns clean their lists of unengaged recipients."
+
   - company: "Conduit Street Services, LLC"
     # logo: "PS"
     position: "Founder & CEO"
