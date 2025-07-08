@@ -165,3 +165,17 @@ settings:
   show_education: true   # Set to false to hide education section
   theme_color: "#1d9bf0" # Main accent color for light theme
   dark_theme_color: "#1d9bf0" # Main accent color for dark theme (optional, defaults to lighter version)
+  
+  # DataBuddy Analytics Configuration
+  # Set your DataBuddy client ID to enable analytics tracking
+  # Get your client ID from https://databuddy.cc
+  databuddy_client_id: "8vsUF2_fn5_rGkpGV2rLK"  # Your DataBuddy client ID
+  # Optional: Configure specific tracking features (all default to true)
+  databuddy_track_outgoing_links: true
+  databuddy_track_interactions: true
+  databuddy_track_engagement: true
+  databuddy_track_scroll_depth: true
+  databuddy_track_exit_intent: true
+  databuddy_track_bounce_rate: true
+  databuddy_track_web_vitals: true
+  databuddy_enable_batching: true

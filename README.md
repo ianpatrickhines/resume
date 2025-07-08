@@ -297,6 +297,38 @@ certifications:
     description: "Professional-level certification for designing AWS solutions."
 ```
 
+### Analytics Tracking
+
+The template includes optional DataBuddy analytics integration. **⚠️ Important for users who fork this repository:**
+
+This template currently has DataBuddy analytics configured with the original author's client ID. If you fork this repository, you should:
+
+1. **Get your own DataBuddy client ID** from [https://databuddy.cc](https://databuddy.cc)
+2. **Replace the client ID** in `_data/resume.yml` with your own:
+
+```yaml
+settings:
+  # ... other settings ...
+  
+  # DataBuddy Analytics Configuration
+  # ⚠️ IMPORTANT: Replace with your own client ID if you fork this repo
+  databuddy_client_id: "your_client_id_here"  # Replace with your actual client ID
+  
+  # Optional: Configure specific tracking features (all default to true)
+  databuddy_track_outgoing_links: true
+  databuddy_track_interactions: true
+  databuddy_track_engagement: true
+  databuddy_track_scroll_depth: true
+  databuddy_track_exit_intent: true
+  databuddy_track_bounce_rate: true
+  databuddy_track_web_vitals: true
+  databuddy_enable_batching: true
+```
+
+**To disable analytics entirely**: Comment out or remove the `databuddy_client_id` line.
+
+**Why this matters**: If you don't change the client ID, analytics from your site will be sent to the original author's DataBuddy account instead of your own.
+
 ## Styling Customization
 
 ### Colors

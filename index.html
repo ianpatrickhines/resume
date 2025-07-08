@@ -9,6 +9,25 @@
     <meta name="description" content="{{ site.data.resume.personal.bio | truncate: 160 }}">
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="{{ site.data.resume.settings.theme_color | default: '#ffffff' }}">
+    
+    <!-- DataBuddy Analytics -->
+    {% if site.data.resume.settings.databuddy_client_id %}
+    <script
+        src="https://cdn.databuddy.cc/databuddy.js"
+        data-client-id="{{ site.data.resume.settings.databuddy_client_id }}"
+        data-track-outgoing-links="{{ site.data.resume.settings.databuddy_track_outgoing_links | default: 'true' }}"
+        data-track-interactions="{{ site.data.resume.settings.databuddy_track_interactions | default: 'true' }}"
+        data-track-engagement="{{ site.data.resume.settings.databuddy_track_engagement | default: 'true' }}"
+        data-track-scroll-depth="{{ site.data.resume.settings.databuddy_track_scroll_depth | default: 'true' }}"
+        data-track-exit-intent="{{ site.data.resume.settings.databuddy_track_exit_intent | default: 'true' }}"
+        data-track-bounce-rate="{{ site.data.resume.settings.databuddy_track_bounce_rate | default: 'true' }}"
+        data-track-web-vitals="{{ site.data.resume.settings.databuddy_track_web_vitals | default: 'true' }}"
+        data-enable-batching="{{ site.data.resume.settings.databuddy_enable_batching | default: 'true' }}"
+        crossorigin="anonymous"
+        async
+    ></script>
+    {% endif %}
+    
     <style>
         /* CSS Custom Properties for Theming */
         :root {
