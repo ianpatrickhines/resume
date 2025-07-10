@@ -3,19 +3,15 @@ personal:
   name: "Ian Patrick Hines"
   title: "Hard work is hard, but it works. So work hard."
   bio: |
-    My story is, at best, unlikely.
+    If you’d told me years ago that I’d end up here, I probably would’ve laughed (and then asked you for directions).
 
-    Less than six months after my third child was born, I was fired from my job at an a16z-backed startup.
+    Less than six months after my third kid was born, I got fired from an a16z-backed startup. So, naturally, I did what any reasonable person would do: I went to the Apple Store, bought a MacBook, and launched a website.
 
-    So I did what anyone would do: I went to the Apple Store, bought a MacBook, and published a website.
+    That was over a decade ago. Since then, I’ve somehow managed to build three businesses, send more than a billion emails (yes, really), and help raise millions of dollars online.
 
-    That was more than a decade ago.
+    I work hard—because, as it turns out, hard work actually works. Who knew?
 
-    Since then, I’ve built three successful businesses, sent more than one billion emails (seriously), and raised millions of dollars online.
-
-    Hard work is hard, but it works. So I work hard.
-
-    Maybe we could work together? [Schedule a call.](https://cal.com/ianpatrickhines)
+    Want to chat? [Let’s schedule a call.](https://cal.com/ianpatrickhines)
   avatar: "assets/ian-inkline.jpg"
   cv_link: "https://x.com/ianpatrickhines"  # For the CV link in header
 
@@ -32,7 +28,7 @@ contact:
 side_projects:
   - title: "Simple Resume Template"
     year: "Ongoing"
-    description: "A simple resume template for GitHub Pages (you're looking at it right now)."
+    description: "I built this resume template because most online resumes are either too much or not enough. This one? Just right. (And you’re looking at it.)"
     url: "https://github.com/ianpatrickhines/resume"
     
   # - title: "Another Side Project" 
@@ -63,7 +59,7 @@ experience:
     position: "Principal"
     period: "2015 - Present"
     location: "Remote"  # Optional
-    description: "Hines Digital is Ian's personal office and holding company where he founds and acquires profitable online businesses."
+    description: "Hines Digital is my personal HQ for launching and collecting businesses—some planned, some happy accidents. It’s where I get to experiment, build, and occasionally surprise myself."
   
   - company: "DoNotContact.net"
     # logo: "DNC"
@@ -71,7 +67,7 @@ experience:
     period: "2025 - Present"
     location: "Remote"  # Optional
     company_url: "https://donotcontact.net"  # Optional
-    description: "DoNotContact.net helps Americans legally opt out of unwanted political communications and helps campaigns clean their lists of unengaged recipients."
+    description: "I started DoNotContact.net to help people take control of their inboxes and opt out of political messages they don’t want. I also help campaigns clean up their lists—because good communication starts with respect (and nobody likes spam)."
 
   - company: "Conduit Street Services, LLC"
     # logo: "PS"
@@ -79,7 +75,7 @@ experience:
     period: "2024 - Present"
     location: "Remote"  # Optional
     company_url: "https://conduitstreetservices.com"  # Optional
-    description: "Conduit Street Services, LLC supports political committees with email & text messaging fundraising services. Since 2024, we've raised more than $2.5 million online."
+    description: "At Conduit Street, I help political committees raise money online with email and text. Since 2024, we’ve raised over $2.5 million—by making sure the right messages reach the right people. It’s a core business, and I’m proud that our work is both effective and respectful. (And yes, my inbox is still always full.)"
 
   - company: "MD5 Data, LLC"
     # logo: "PS"
@@ -87,14 +83,14 @@ experience:
     period: "2024 - Present"
     location: "Remote"  # Optional
     company_url: "https://md5data.com"  # Optional
-    description: "MD5 Data, LLC provides compliant political data services."
+    description: "MD5 Data is my answer to the question: ‘How do we get political data right?’ Turns out, it’s a lot of work—but I like a good puzzle."
 
   - company: "Freelance"
     # logo: "PS"
     position: "Freelance"
-    period: "2013 - 2015"
+    period: "2013 - Present"
     location: "Remote"  # Optional
-    description: "Provided NationBuilder consulting services to campaigns & causes."
+    description: "Freelancing took me to ten countries and put me in the room for some wild campaigns. I’ve helped elect national leaders (like the UK Prime Minister), and helped Pierre Poilievre become leader of the Canadian Conservatives. My clients? National parties in the UK, Canada, New Zealand, Malta, Australia, and more. Not bad for a guy with a laptop and a sense of humor."
 
 # Education
 education:
@@ -102,13 +98,13 @@ education:
     logo: "🎓"
     degree: "Master of Public Administration"
     period: "2010"
-    description: "Focused on budgeting, statistics, and government & non-profit management."
+    description: "I dove into budgeting, stats, and the mysteries of government and non-profits. Spoiler: it’s mostly about people (and paperwork)."
 
   - institution: "McDaniel College"
     logo: "🎓"
     degree: "Bachelor of Arts in Political Science"
     period: "2004 - 2007"
-    description: "Graduated in three years. Focused on political science with an emphasis on US constitutional law and state & local government."
+    description: "Graduated in three years, fueled by coffee and a love for constitutional law. I still have opinions about state & local government."
 
 # Client Projects
 # client_projects:
@@ -165,12 +161,12 @@ certifications:
   - title: "Certified NationBuilder Architect"
     organization: "NationBuilder"
     year: "2013"
-    description: "Certified to build custom websites and themes for multiple NationBuilder customers."
+    description: "I got certified to build custom NationBuilder sites. Basically, I can make their platform do backflips."
 
   - title: "Certified NationBuilder Expert"
     organization: "NationBuilder"
     year: "2013"
-    description: "Certified to support customers' day to day use of NationBuilder."
+    description: "This one means I can help with the day-to-day stuff, too. (And yes, I’ve answered more support tickets than I can count.)"
 
 # Site Settings
 settings:
