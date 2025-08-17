@@ -66,13 +66,13 @@ experience:
     location: "Remote"  # Optional
     description: "Co-founded and lead strategic direction for a major political action committee that has raised over $1.5 million. Oversee fundraising strategy, compliance operations, and strategic positioning through Conduit Street Services. This role demonstrates my ability to build political infrastructure from concept to execution while maintaining strategic oversight."
   
-  - company: "DoNotContact.net"
-    # logo: "DNC"
-    position: "Founder & Lead Developer"
-    period: "2025 - Present"
-    location: "Remote"  # Optional
-    company_url: "https://donotcontact.net"  # Optional
-    description: "Built a compliance-focused platform that helps campaigns maintain clean lists while respecting voter preferences. This addresses a critical gap in political operations—balancing effective communication with regulatory compliance and voter respect."
+  # - company: "DoNotContact.net"
+  #   # logo: "DNC"
+  #   position: "Founder & Lead Developer"
+  #   period: "2025 - Present"
+  #   location: "Remote"  # Optional
+  #   company_url: "https://donotcontact.net"  # Optional
+  #   description: "Built a compliance-focused platform that helps campaigns maintain clean lists while respecting voter preferences. This addresses a critical gap in political operations—balancing effective communication with regulatory compliance and voter respect."
 
   - company: "Conduit Street Services, LLC"
     # logo: "PS"
