@@ -1,18 +1,16 @@
 # Personal Information
 personal:
   name: "Ian Patrick Hines"
-  title: "Hard work is hard, but it works. So work hard."
+  title: "Strategic Architect & Political Infrastructure Builder"
   bio: |
-    If you’d told me years ago that I’d end up here, I probably would’ve laughed (and then asked you for directions).
+    I build and scale political infrastructure that drives real results. Over the past decade, I've evolved from a solo operator to an architect of multi-layered systems that generate revenue, influence, and strategic advantage.
 
-    Less than six months after my third kid was born, I got fired from an a16z-backed startup. So, naturally, I did what any reasonable person would do: I went to the Apple Store, bought a MacBook, and launched a website.
+    My approach combines deep technical expertise with strategic thinking—identifying opportunities, building the right teams, and creating sustainable competitive advantages. I've helped raise millions online, built data systems that power political operations, and created infrastructure that scales beyond individual campaigns.
 
-    That was over a decade ago. Since then, I’ve somehow managed to build three businesses, send more than a billion emails (yes, really), and help raise millions of dollars online.
+    Today, I focus on strategic architecture: designing systems, building teams, and positioning organizations for long-term success in the political ecosystem.
 
-    I work hard—because, as it turns out, hard work actually works. Who knew?
-
-    Want to chat? [Let’s schedule a call.](https://cal.com/ianpatrickhines)
-  avatar: "assets/20250715_iph_cartoon-square.png"
+    Ready to discuss strategic opportunities? [Let's schedule a call.](https://cal.com/ianpatrickhines)
+  avatar: "assets/zgxNnbTJ_400x400.jpg"
   cv_link: "https://x.com/ianpatrickhines"  # For the CV link in header
 
 # Contact Information
@@ -28,7 +26,7 @@ contact:
 side_projects:
   - title: "Simple Resume Template"
     year: "Ongoing"
-    description: "I built this resume template because most online resumes are either too much or not enough. This one? Just right. (And you’re looking at it.)"
+    description: "Built this resume template to demonstrate clean, efficient design principles. Sometimes the best solutions are the simplest ones."
     url: "https://github.com/ianpatrickhines/resume"
     
   # - title: "Another Side Project" 
@@ -56,10 +54,10 @@ side_projects:
 experience:
   - company: "Hines Digital"
     # logo: "SC"  # Can be emoji, initials, or image URL
-    position: "Principal"
+    position: "Principal & Strategic Architect"
     period: "2015 - Present"
     location: "Remote"  # Optional
-    description: "Hines Digital is my personal HQ for launching and collecting businesses—some planned, some happy accidents. It’s where I get to experiment, build, and occasionally surprise myself."
+    description: "Hines Digital serves as my strategic headquarters for building and scaling businesses. I focus on identifying opportunities, designing systems, and positioning organizations for sustainable growth in competitive markets."
   
   - company: "DoNotContact.net"
     # logo: "DNC"
@@ -67,7 +65,7 @@ experience:
     period: "2025 - Present"
     location: "Remote"  # Optional
     company_url: "https://donotcontact.net"  # Optional
-    description: "I started DoNotContact.net to help people take control of their inboxes and opt out of political messages they don’t want. I also help campaigns clean up their lists—because good communication starts with respect (and nobody likes spam)."
+    description: "Built a compliance-focused platform that helps campaigns maintain clean lists while respecting voter preferences. This addresses a critical gap in political operations—balancing effective communication with regulatory compliance and voter respect."
 
   - company: "Conduit Street Services, LLC"
     # logo: "PS"
@@ -75,7 +73,7 @@ experience:
     period: "2024 - Present"
     location: "Remote"  # Optional
     company_url: "https://conduitstreetservices.com"  # Optional
-    description: "At Conduit Street, I help political committees raise money online with email and text. Since 2024, we’ve raised over $2.5 million—by making sure the right messages reach the right people. It’s a core business, and I’m proud that our work is both effective and respectful. (And yes, my inbox is still always full.)"
+    description: "Built and scaled a political services company that has raised over $2.5 million since 2024. Our success comes from combining data-driven targeting with strategic messaging that connects with donors. I've evolved from hands-on execution to strategic leadership, building systems that scale beyond individual campaigns."
 
   - company: "MD5 Data, LLC"
     # logo: "PS"
@@ -83,14 +81,14 @@ experience:
     period: "2024 - Present"
     location: "Remote"  # Optional
     company_url: "https://md5data.com"  # Optional
-    description: "MD5 Data is my answer to the question: ‘How do we get political data right?’ Turns out, it’s a lot of work—but I like a good puzzle."
+    description: "Created a data infrastructure company that addresses the critical need for accurate, actionable political intelligence. MD5 Data represents my strategic approach to building competitive advantages through superior data systems and analytics."
 
   - company: "Freelance"
     # logo: "PS"
-    position: "Freelance"
+    position: "Strategic Consultant"
     period: "2013 - Present"
     location: "Remote"  # Optional
-    description: "Freelancing took me to ten countries and put me in the room for some wild campaigns. I’ve helped elect national leaders (like the UK Prime Minister), and helped Pierre Poilievre become leader of the Canadian Conservatives. My clients? National parties in the UK, Canada, New Zealand, Malta, Australia, and more. Not bad for a guy with a laptop and a sense of humor."
+    description: "Built a global consulting practice serving national political parties across the UK, Canada, New Zealand, Malta, and Australia. Helped elect national leaders including the UK Prime Minister and Canadian Conservative Party leader Pierre Poilievre. This experience taught me how to identify strategic opportunities and build winning systems across diverse political environments."
 
 # Education
 education:
@@ -98,13 +96,13 @@ education:
     logo: "🎓"
     degree: "Master of Public Administration"
     period: "2010"
-    description: "I dove into budgeting, stats, and the mysteries of government and non-profits. Spoiler: it’s mostly about people (and paperwork)."
+    description: "Focused on public policy analysis, organizational management, and strategic planning. This foundation informs my approach to building political infrastructure that balances effectiveness with compliance."
 
   - institution: "McDaniel College"
     logo: "🎓"
     degree: "Bachelor of Arts in Political Science"
     period: "2004 - 2007"
-    description: "Graduated in three years, fueled by coffee and a love for constitutional law. I still have opinions about state & local government."
+    description: "Accelerated three-year program with focus on constitutional law and state/local government. This academic foundation provides the theoretical framework for my practical work in political operations and infrastructure."
 
 # Client Projects
 # client_projects:
@@ -161,12 +159,12 @@ certifications:
   - title: "Certified NationBuilder Architect"
     organization: "NationBuilder"
     year: "2013"
-    description: "I got certified to build custom NationBuilder sites. Basically, I can make their platform do backflips."
+    description: "Advanced certification demonstrating expertise in building custom NationBuilder solutions and complex political infrastructure."
 
   - title: "Certified NationBuilder Expert"
     organization: "NationBuilder"
     year: "2013"
-    description: "This one means I can help with the day-to-day stuff, too. (And yes, I’ve answered more support tickets than I can count.)"
+    description: "Professional certification covering comprehensive NationBuilder platform expertise and best practices for political operations."
 
 # Site Settings
 settings:
