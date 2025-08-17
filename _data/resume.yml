@@ -59,6 +59,13 @@ experience:
     location: "Remote"  # Optional
     description: "Hines Digital serves as my strategic headquarters for building and scaling businesses. I focus on identifying opportunities, designing systems, and positioning organizations for sustainable growth in competitive markets."
   
+  - company: "Elect Republicans PAC"
+    # logo: "ER"  # Can be emoji, initials, or image URL
+    position: "Co-founder & Executive Director"
+    period: "2020 - Present"
+    location: "Remote"  # Optional
+    description: "Co-founded and lead strategic direction for a major political action committee that has raised over $1.5 million. Oversee fundraising strategy, compliance operations, and strategic positioning through Conduit Street Services. This role demonstrates my ability to build political infrastructure from concept to execution while maintaining strategic oversight."
+  
   - company: "DoNotContact.net"
     # logo: "DNC"
     position: "Founder & Lead Developer"
