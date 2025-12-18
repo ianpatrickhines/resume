@@ -1,8 +1,6 @@
-# Read.cv Style Resume Template
+# Resume Template
 
 A clean, fast-loading resume/profile template inspired by read.cv, designed for GitHub Pages deployment with YAML-based content management.
-
-**[📖 View Live Demo](https://ianpatrickhines.github.io/resume)** | **[🚀 Get Started](#quick-start)**
 
 ## Features
 
@@ -37,21 +35,23 @@ A clean, fast-loading resume/profile template inspired by read.cv, designed for 
    - Go to Settings → Pages
    - Select "Deploy from a branch" → main branch
    - Your site will be available at `https://yourusername.github.io/resume`
-   - Example: [https://ianpatrickhines.github.io/resume](https://ianpatrickhines.github.io/resume)
 
 2. **Customize Your Content**:
    - Edit `_data/resume.yml` to update all your information
    - No HTML editing required - all content is managed through the YAML file
    - The template automatically builds your resume from the data
 
+3. **Update Configuration**:
+   - Edit `_config.yml` to update the URL and repository references to match your GitHub username
+
 ## Content Management
 
 All content is managed through the `_data/resume.yml` file. This approach:
 
-- ✅ **Safe**: Prevents accidental HTML structure breaks
-- ✅ **User-friendly**: No need to understand HTML/CSS
-- ✅ **Maintainable**: Clean separation of content and presentation
-- ✅ **Version-controlled**: Easy to track content changes
+- **Safe**: Prevents accidental HTML structure breaks
+- **User-friendly**: No need to understand HTML/CSS
+- **Maintainable**: Clean separation of content and presentation
+- **Version-controlled**: Easy to track content changes
 
 ### Complete YAML Schema
 
@@ -169,7 +169,7 @@ personal:
   avatar: "👩‍💼"  # Emoji, initials, or image URL
   cv_link: "https://example.com/cv"  # Optional CV/portfolio link
 
-# Contact Information  
+# Contact Information
 contact:
   email: "jane.smith@example.com"
   linkedin: "https://linkedin.com/in/janesmith"
@@ -199,7 +199,7 @@ Edit `_data/resume.yml` to show/hide sections:
 settings:
   show_awards: true        # Show/hide awards section
   show_education: true     # Show/hide education section
-  # All other sections (side_projects, client_projects, speaking, 
+  # All other sections (side_projects, client_projects, speaking,
   # features, skills) are shown if they exist in the YAML file
   theme_color: "#0066cc"   # Light theme accent color
   dark_theme_color: "#5aa3ff"  # Dark theme accent color (optional)
@@ -297,23 +297,20 @@ certifications:
     description: "Professional-level certification for designing AWS solutions."
 ```
 
-### Analytics Tracking
+### Analytics Tracking (Optional)
 
-The template includes optional DataBuddy analytics integration. **⚠️ Important for users who fork this repository:**
+The template includes optional DataBuddy analytics integration. To enable it:
 
-This template currently has DataBuddy analytics configured with the original author's client ID. If you fork this repository, you should:
-
-1. **Get your own DataBuddy client ID** from [https://databuddy.cc](https://databuddy.cc)
-2. **Replace the client ID** in `_data/resume.yml` with your own:
+1. Get your client ID from [https://databuddy.cc](https://databuddy.cc)
+2. Add your client ID in `_data/resume.yml`:
 
 ```yaml
 settings:
   # ... other settings ...
-  
+
   # DataBuddy Analytics Configuration
-  # ⚠️ IMPORTANT: Replace with your own client ID if you fork this repo
-  databuddy_client_id: "your_client_id_here"  # Replace with your actual client ID
-  
+  databuddy_client_id: "your_client_id_here"
+
   # Optional: Configure specific tracking features (all default to true)
   databuddy_track_outgoing_links: true
   databuddy_track_interactions: true
@@ -325,9 +322,7 @@ settings:
   databuddy_enable_batching: true
 ```
 
-**To disable analytics entirely**: Comment out or remove the `databuddy_client_id` line.
-
-**Why this matters**: If you don't change the client ID, analytics from your site will be sent to the original author's DataBuddy account instead of your own.
+**To disable analytics**: Leave the `databuddy_client_id` commented out (which is the default).
 
 ## Styling Customization
 
@@ -341,8 +336,7 @@ settings:
 ```
 
 The resume includes comprehensive dark mode support:
-- Theme toggle button (top-right corner) cycles between light/dark/auto modes
-- System preference detection for seamless integration
+- Automatic system preference detection
 - WCAG compliant contrast ratios for accessibility
 - Smooth transitions with reduced-motion support
 
@@ -377,9 +371,9 @@ border: 1px solid #eee; /* Border color */
 To develop locally:
 
 1. Install Jekyll: `gem install jekyll bundler`
-2. Build site: `jekyll build`
-3. Serve locally: `jekyll serve`
-4. View at: `http://localhost:4000`
+2. Install dependencies: `bundle install`
+3. Serve locally: `bundle exec jekyll serve`
+4. View at: `http://localhost:4000/resume`
 
 ## GitHub Pages Compatibility
 

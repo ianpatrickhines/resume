@@ -1,137 +1,103 @@
 # Personal Information
 personal:
-  name: "Ian Patrick Hines"
-  title: "Strategic Architect & Political Infrastructure Builder"
+  name: "Jane Smith"
+  title: "Senior Software Engineer"
   bio: |
-    I build and scale political infrastructure that drives real results. Over the past decade, I've evolved from a solo operator to an architect of multi-layered systems that generate revenue, influence, and strategic advantage.
+    Experienced software engineer with a passion for building scalable, user-focused applications. I specialize in full-stack development with expertise in modern web technologies.
 
-    My approach combines deep technical expertise with strategic thinking—identifying opportunities, building the right teams, and creating sustainable competitive advantages. I've helped raise millions online, built data systems that power political operations, and created infrastructure that scales beyond individual campaigns.
+    When I'm not coding, you'll find me contributing to open-source projects, mentoring junior developers, and exploring the latest trends in technology.
 
-    Today, I focus on strategic architecture: designing systems, building teams, and positioning organizations for long-term success in the political ecosystem.
-
-    Ready to discuss strategic opportunities? [Let's schedule a call.](https://cal.com/ianpatrickhines)
-  avatar: "assets/zgxNnbTJ_400x400.jpg"
-  cv_link: "https://x.com/ianpatrickhines"  # For the CV link in header
+    Interested in working together? [Get in touch.](mailto:jane@example.com)
+  avatar: "👩‍💻"  # Can be emoji, initials, or image URL (e.g., "assets/avatar.jpg")
+  cv_link: "https://github.com/yourusername"  # Optional link displayed in header
 
 # Contact Information
 contact:
-  email: "ian@hines.digital"
-  linkedin: "https://linkedin.com/in/ianpatrickhines"
-  github: "https://github.com/ianpatrickhines"
-  twitter: "https://x.com/ianpatrickhines"
-  website: "https://www.hines.digital"  # Optional
-  # phone: ""    # Optional - commented out when not provided
+  email: "jane@example.com"
+  linkedin: "https://linkedin.com/in/janesmith"
+  github: "https://github.com/janesmith"
+  twitter: "https://x.com/janesmith"
+  website: "https://janesmith.dev"  # Optional
+  # phone: "+1 (555) 123-4567"    # Optional - uncomment to display
 
-# Side Projects (new section)
+# Side Projects (optional section)
 side_projects:
-  - title: "Simple Resume Template"
+  - title: "Open Source CLI Tool"
     year: "Ongoing"
-    description: "Built this resume template to demonstrate clean, efficient design principles. Sometimes the best solutions are the simplest ones."
-    url: "https://github.com/ianpatrickhines/resume"
-    
-  # - title: "Another Side Project" 
-  #   year: "2023"
-  #   description: "Another example of personal work and exploration."
-  #   url: "https://example.com/project2"
-    
-# Speaking (new section)  
+    description: "A command-line utility that simplifies common development workflows. Built with Node.js and published on npm."
+    url: "https://github.com/janesmith/cli-tool"
+
+  # - title: "Another Side Project"
+  #   year: "2024"
+  #   description: "Description of your personal project."
+  #   url: "https://example.com/project"
+
+# Speaking (optional section)
 # speaking:
-#   - title: "Sample Conference Talk"
+#   - title: "Building Scalable APIs"
 #     event: "Tech Conference 2024"
 #     year: "2024"
-#     description: "Spoke about innovative approaches to software development."
+#     description: "Presented best practices for designing and scaling RESTful APIs."
 #     url: "https://example.com/talk"
-    
-# Features (new section)
+
+# Features (optional section - media mentions, publications)
 # features:
-#   - title: "Sample Feature Highlight"
-#     publication: "Tech Magazine"
+#   - title: "Interview: Modern Web Development"
+#     publication: "Tech Weekly"
 #     year: "2024"
-#     description: "Featured article about industry trends and innovations."
+#     description: "Discussed trends in frontend frameworks and developer experience."
 #     url: "https://example.com/article"
 
 # Experience
 experience:
-  - company: "Hines Digital"
-    # logo: "SC"  # Can be emoji, initials, or image URL
-    position: "Principal & Strategic Architect"
-    period: "2015 - Present"
-    location: "Remote"  # Optional
-    description: "Hines Digital serves as my strategic headquarters for building and scaling businesses. I focus on identifying opportunities, designing systems, and positioning organizations for sustainable growth in competitive markets."
-  
-  - company: "Elect Republicans"
-    # logo: "ER"  # Can be emoji, initials, or image URL
-    position: "Co-founder & Executive Director"
-    period: "2020 - Present"
-    location: "Remote"  # Optional
-    company_url: "https://www.electrepublicans.org"  # Optional
-    description: "Co-founded and lead strategic direction for a major political action committee that has raised over $1.5 million. Oversee fundraising strategy, compliance operations, and strategic positioning through Conduit Street Services. This role demonstrates my ability to build political infrastructure from concept to execution while maintaining strategic oversight."
-  
-  # - company: "DoNotContact.net"
-  #   # logo: "DNC"
-  #   position: "Founder & Lead Developer"
-  #   period: "2025 - Present"
-  #   location: "Remote"  # Optional
-  #   company_url: "https://donotcontact.net"  # Optional
-  #   description: "Built a compliance-focused platform that helps campaigns maintain clean lists while respecting voter preferences. This addresses a critical gap in political operations—balancing effective communication with regulatory compliance and voter respect."
+  - company: "Tech Company Inc."
+    # logo: "TC"  # Can be emoji, initials, or image URL
+    position: "Senior Software Engineer"
+    period: "2021 - Present"
+    location: "San Francisco, CA"  # Optional
+    company_url: "https://techcompany.example.com"  # Optional
+    description: "Lead development of core platform features serving millions of users. Mentor junior engineers and drive technical decisions for the engineering team."
 
-  - company: "Conduit Street Services, LLC"
-    # logo: "PS"
-    position: "Founder & CEO"
-    period: "2024 - Present"
-    location: "Remote"  # Optional
-    company_url: "https://conduitstreetservices.com"  # Optional
-    description: "Built and scaled a political services company that has raised over $2.5 million since 2024. Our success comes from combining data-driven targeting with strategic messaging that connects with donors. I've evolved from hands-on execution to strategic leadership, building systems that scale beyond individual campaigns."
+  - company: "Startup Labs"
+    position: "Software Engineer"
+    period: "2018 - 2021"
+    location: "New York, NY"
+    company_url: "https://startuplabs.example.com"
+    description: "Built and maintained multiple microservices handling high-volume transaction processing. Collaborated with product and design teams to deliver user-focused features."
 
-  - company: "MD5 Data, LLC"
-    # logo: "PS"
-    position: "Founder & CEO"
-    period: "2024 - Present"
-    location: "Remote"  # Optional
-    company_url: "https://md5data.com"  # Optional
-    description: "Created a data infrastructure company that addresses the critical need for accurate, actionable political intelligence. MD5 Data represents my strategic approach to building competitive advantages through superior data systems and analytics."
+  - company: "Digital Agency Co."
+    position: "Junior Developer"
+    period: "2016 - 2018"
+    location: "Boston, MA"
+    description: "Developed responsive web applications for clients across various industries. Gained experience in agile methodologies and client communication."
 
   - company: "Freelance"
-    # logo: "PS"
-    position: "Strategic Consultant"
-    period: "2013 - Present"
-    location: "Remote"  # Optional
-    description: "Built a global consulting practice serving national political parties across the UK, Canada, New Zealand, Malta, and Australia. Helped elect national leaders including the UK Prime Minister and Canadian Conservative Party leader Pierre Poilievre. This experience taught me how to identify strategic opportunities and build winning systems across diverse political environments."
+    position: "Web Developer"
+    period: "2014 - 2016"
+    location: "Remote"
+    description: "Built custom websites and web applications for small businesses and startups. Managed projects end-to-end from requirements gathering to deployment."
 
 # Education
 education:
-  - institution: "University of Baltimore"
+  - institution: "State University"
     logo: "🎓"
-    degree: "Master of Public Administration"
-    period: "2010"
-    description: "Focused on public policy analysis, organizational management, and strategic planning. This foundation informs my approach to building political infrastructure that balances effectiveness with compliance."
+    degree: "Master of Science in Computer Science"
+    period: "2014 - 2016"
+    description: "Focused on distributed systems and machine learning. Completed thesis on scalable data processing architectures."
 
-  - institution: "McDaniel College"
+  - institution: "City College"
     logo: "🎓"
-    degree: "Bachelor of Arts in Political Science"
-    period: "2004 - 2007"
-    description: "Accelerated three-year program with focus on constitutional law and state/local government. This academic foundation provides the theoretical framework for my practical work in political operations and infrastructure."
+    degree: "Bachelor of Science in Computer Science"
+    period: "2010 - 2014"
+    description: "Dean's List. Active member of the Computer Science Club and hackathon organizer."
 
-# Client Projects
+# Client Projects (optional section)
 # client_projects:
-#   - name: "Sample Project One"
+#   - name: "E-commerce Platform"
 #     year: "2024"
-#     description: "Sample project entry. A brief description of your project, what technologies you used, and what problems it solves. Keep it concise but informative."
-#     url: "https://sampleproject1.com"  # Optional main project URL
-#     image: "https://via.placeholder.com/200x100/cccccc/666666?text=Project+1"  # 200x100px image
-#     links:
-#       - name: "Live Demo"
-#         url: "#"
-#         icon: "🔗"
-#       - name: "GitHub"
-#         url: "#"
-#         icon: "🐙"
-#  
-#   - name: "Sample Project Two"
-#     year: "2023"
-#     description: "Another sample project entry showcasing different skills and technologies. Highlight the impact and results achieved."
-#     url: "https://sampleproject2.com"  # Optional main project URL
-#     image: "https://via.placeholder.com/200x100/cccccc/666666?text=Project+2"  # 200x100px image
+#     description: "Built a full-featured e-commerce platform with inventory management, payment processing, and analytics dashboard."
+#     url: "https://example.com"  # Optional main project URL
+#     image: "https://via.placeholder.com/200x100/cccccc/666666?text=Project"  # 200x100px image
 #     links:
 #       - name: "Live Demo"
 #         url: "#"
@@ -140,7 +106,7 @@ education:
 #         url: "#"
 #         icon: "🐙"
 
-# Skills (removed as not in provided data)
+# Skills (optional section - uncomment to enable)
 # skills:
 #   - "JavaScript"
 #   - "TypeScript"
@@ -151,46 +117,44 @@ education:
 #   - "Git"
 #   - "AWS"
 #   - "Docker"
-#   - "CSS"
-#   - "HTML"
-#   - "REST APIs"
 
-# Awards (Optional)
+# Awards (optional section)
 awards:
-  # - title: "Award Name"
-  #   organization: "Organization"
-  #   year: "2024"
-  #   description: "Award description..."
+  # - title: "Innovation Award"
+  #   organization: "Tech Company Inc."
+  #   year: "2023"
+  #   description: "Recognized for developing an innovative solution that improved system performance by 40%."
 
-# Certifications (Optional)
+# Certifications (optional section)
 certifications:
-  - title: "Certified NationBuilder Architect"
-    organization: "NationBuilder"
-    year: "2013"
-    description: "Advanced certification demonstrating expertise in building custom NationBuilder solutions and complex political infrastructure."
+  - title: "AWS Solutions Architect"
+    organization: "Amazon Web Services"
+    year: "2022"
+    description: "Professional certification demonstrating expertise in designing distributed systems on AWS."
 
-  - title: "Certified NationBuilder Expert"
-    organization: "NationBuilder"
-    year: "2013"
-    description: "Professional certification covering comprehensive NationBuilder platform expertise and best practices for political operations."
+  - title: "Google Cloud Professional"
+    organization: "Google Cloud"
+    year: "2021"
+    description: "Certification covering cloud architecture, security, and best practices for GCP."
 
 # Site Settings
 settings:
   show_awards: true      # Set to false to hide awards section
   show_education: true   # Set to false to hide education section
-  theme_color: "#1d9bf0" # Main accent color for light theme
-  dark_theme_color: "#1d9bf0" # Main accent color for dark theme (optional, defaults to lighter version)
-  
-  # DataBuddy Analytics Configuration
-  # Set your DataBuddy client ID to enable analytics tracking
-  # Get your client ID from https://databuddy.cc
-  databuddy_client_id: "8vsUF2_fn5_rGkpGV2rLK"  # Your DataBuddy client ID
+  theme_color: "#0066cc" # Main accent color for light theme
+  dark_theme_color: "#5aa3ff" # Main accent color for dark theme (optional)
+
+  # DataBuddy Analytics Configuration (optional)
+  # To enable analytics, get your client ID from https://databuddy.cc
+  # and uncomment the line below:
+  # databuddy_client_id: "your_client_id_here"
+
   # Optional: Configure specific tracking features (all default to true)
-  databuddy_track_outgoing_links: true
-  databuddy_track_interactions: true
-  databuddy_track_engagement: true
-  databuddy_track_scroll_depth: true
-  databuddy_track_exit_intent: true
-  databuddy_track_bounce_rate: true
-  databuddy_track_web_vitals: true
-  databuddy_enable_batching: true
+  # databuddy_track_outgoing_links: true
+  # databuddy_track_interactions: true
+  # databuddy_track_engagement: true
+  # databuddy_track_scroll_depth: true
+  # databuddy_track_exit_intent: true
+  # databuddy_track_bounce_rate: true
+  # databuddy_track_web_vitals: true
+  # databuddy_enable_batching: true

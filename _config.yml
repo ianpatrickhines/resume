@@ -1,7 +1,7 @@
 # Jekyll configuration for GitHub Pages
-title: "Sample Resume Template"
+title: "Resume Template"
 description: "A clean, fast-loading resume template with sample data"
-url: "https://ianpatrickhines.github.io"
+url: "https://yourusername.github.io"
 baseurl: "/resume"
 
 # Build settings
@@ -23,5 +23,6 @@ exclude:
   - CUSTOMIZATION.md
 
 # GitHub Pages specific settings
+# Update this after forking to your own repository
 github:
-  repository_nwo: ianpatrickhines/resume
+  repository_nwo: yourusername/resume
